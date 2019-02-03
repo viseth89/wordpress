@@ -142,3 +142,38 @@ section h3{
 #who-benefits{
   background:white;
 }
+
+#course-features{
+  background: #3e4249;
+  color:white;
+  text-align:center;
+}
+
+#project-features{
+  text-align:center;
+}
+#featurette {
+  background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+  background-size:cover;
+  text-align:center;
+  color:white;
+}
+
+/* 90% moves it over to the right; -10 px moves it down*/
+#instructor{
+  background: white url('../img/brad-elvis.png')90% -10px no-repeat;
+}
+
+/* Custom Icon Sprites */
+i.ci{
+  display:inline-block;
+  height:40px;
+  width: 40px;
+  background:url('../img/icon-sprite.png') no-repeat;
+}
+.ci.ci-computer   {background-position: 0 0; }
+.ci.ci-watch      {background-position: -40px 0; }
+.ci.ci-calender   {background-position: -80px 0; }
+.ci.ci-community   {background-position: -120px 0; }
+.ci.ci-instructor   {background-position: -160px 0; }
+.ci.ci-device   {background-position: -200px 0; }
