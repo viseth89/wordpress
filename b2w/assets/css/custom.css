@@ -49,6 +49,49 @@ button, input, .btn, a.btn {
 img {
   max-width: 100%;
 }
+
+.modal-content{
+  background:url('../img/tile.jpg')
+}
+
+.badge.social {
+  background:#ccc;
+  font-size:24px;
+  height:40px;
+  width:40px;
+  text-align:center;
+  line-height:42px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  -webkit-border-radius:50px;
+  -moz-border-radius: 50px;
+  border-radius:50px;
+}
+
+.badge.social.twitter:hover{
+  background:#55acee;
+}
+.badge.social.facebook:hover{
+  background:#3b5998;
+}
+.badge.social.gplus:hover{
+  background:#db4b39;
+}
+
+blockquote {
+  padding: 0;
+  border: none;
+  font-style: italic;
+  text-align: left;
+}
+blockquote cite{
+  display: block;
+  color:#777;
+  margin: 15px 0 0 0;
+} 
+blockquote:before {
+  display: none;
+}
 /* Hero ---- notice 50% 0 = semicentered, not a way I have seen or used or prefer really*/
 #hero{
   background:url('../img/hero-bg.jpg') 50% 0 repeat fixed; 
@@ -164,6 +207,51 @@ section h3{
   background: white url('../img/brad-elvis.png')90% -10px no-repeat;
 }
 
+#instructor h2 {
+  margin: 0 0 20px;
+}
+#instructor .num{
+  display:table;
+  font-size:30px;
+  font-weight:bold;
+  color:white;
+  line-height:24px;
+  height:140px;
+  width:140px;
+  text-align:center;
+  background:#dd5638;
+  -webkit-border-radius:100%;
+  -moz-border-radius:100%;
+  border-radius: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+#instructor .num .num-content {
+  display: table-cell;
+  vertical-align: middle;
+
+}
+#instructor .num span{
+  display:block;
+  font-size:20px;
+  font-weight:normal;
+}
+
+#kudos{
+  text-align:center;
+}
+
+.testimonial {
+  margin-bottom: 60px;
+}
+
+.testimonial img{
+  -webkit-border-radius: 50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+
+}
 /* Custom Icon Sprites */
 i.ci{
   display:inline-block;
