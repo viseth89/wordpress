@@ -15,6 +15,10 @@ body{
   line-height: 1.7em;
 }
 
+a{
+  color:#333;
+}
+
 header{
   background: #393939;
   color: #fff;
@@ -43,4 +47,24 @@ footer{
   color: #fff;
   padding: 10px 10px;
   text-align: center;
+}
+
+article.post{
+  border-bottom: 1px #ccc solid;
+  overflow:hidden;
+  /* why hidden? its the scroll bar on the side to go up and down*/
+}
+
+article.post a.button{
+  display:inline-block;
+  background: #333;
+  color:#fff;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.post-thumbnail img{
+  width:100%;
+  height:auto;
 }

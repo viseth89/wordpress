@@ -6,7 +6,7 @@
 
         <article class="post">
           <?php while(have_posts()): the_post(); ?>
-            <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+            <h3><?php the_title(); ?></h3>
             <div class="meta">
             Created By <?php the_author(); ?> on <?php the_time('F j, Y g:i a'); ?>
             </div>
@@ -18,9 +18,9 @@
             <?php endif; ?>
 
 
-            <?php the_excerpt(); ?>
-            <br>
-            <a class='button' href="<?php the_permalink(); ?>">Read More</a>
+
+            <?php the_content(); ?>
+
           <?php endwhile; ?>
         </article>
 
