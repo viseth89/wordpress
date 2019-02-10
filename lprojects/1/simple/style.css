@@ -3,6 +3,7 @@
   Author: Viseth (guide by Traversey)
   Author URI: http://visethsen.com
   Description: Very Simple Wordpress Theme to Learn Concepts
+  Version:
 */
 
 body{
@@ -38,22 +39,35 @@ header h1{
   overflow: auto;
 }
 
-.main {
-  margin: 15px 0;
+
+.clr {
+  clear:both;
 }
+
+.main{
+  margin: 15px 0;
+  float:left;
+  width:68%
+}
+
+.sidebar{
+  float:right;
+  width:28%;
+}
+
 
 footer{
-  background: #393939;
-  color: #fff;
-  padding: 10px 10px;
-  text-align: center;
+	background: #393939;
+	color:#fff;
+	padding:10px 10px;
+	text-align: center;
 }
-
 article.post{
   border-bottom: 1px #ccc solid;
   overflow:hidden;
   /* why hidden? its the scroll bar on the side to go up and down*/
 }
+
 
 article.post a.button{
   display:inline-block;
@@ -64,7 +78,57 @@ article.post a.button{
   text-decoration: none;
 }
 
+.meta{
+  background:#333;
+  color:#fff;
+  padding:5px;
+}
+
+.meta a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .post-thumbnail img{
   width:100%;
   height:auto;
+}
+
+.main-nav{
+  background:#000;
+  color:#fff;
+  padding:5px;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  list-style:none;
+  float:left;
+  padding-right:15px;
+}
+
+.main-nav a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.side-widget{
+  border:1px #ccc solid;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  margin-top:20px;
+}
+
+.side-widget li{
+  list-style: none;
+  line-height:2.2em;
+  border-bottom:dotted 1px #ccc;
+}
+
+.side-widget a{
+  text-decoration: none;
 }

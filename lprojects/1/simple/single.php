@@ -1,33 +1,37 @@
 
 <?php get_header(); ?>
+<div class="container">
   <div class="main">
-    <div class="container">
-      <?php if(have_posts()) : ?>
 
-        <article class="post">
-          <?php while(have_posts()): the_post(); ?>
-            <h3><?php the_title(); ?></h3>
-            <div class="meta">
-            Created By <?php the_author(); ?> on <?php the_time('F j, Y g:i a'); ?>
+    <?php if(have_posts()) : ?>
+
+      <article class="post">
+        
+        <?php while(have_posts()): the_post(); ?>
+          <h3><?php the_title(); ?></h3>
+          <div class="meta">
+          Created By <?php the_author(); ?> on <?php the_time('F j, Y g:i a'); ?>
+          </div>
+
+          <?php if(has_post_thumbnail()) : ?>
+            <div class="post-thumbnail">
+            <?php the_post_thumbnail(); ?>
             </div>
+          <?php endif; ?>
 
-            <?php if(has_post_thumbnail()) : ?>
-              <div class="post-thumbnail">
-              <?php the_post_thumbnail(); ?>
-              </div>
-            <?php endif; ?>
+          <?php the_content(); ?>
+
+        <?php endwhile; ?>
+      </article>
+
+    <?php else : ?>
+      <?php echo wpautop('Sorry, No posts were found'); ?>
+    <?php endif; ?>
+
+    <?php comments_template() ?>
+  <!-- End of div main -->
+  </div>  
 
 
-
-            <?php the_content(); ?>
-
-          <?php endwhile; ?>
-        </article>
-
-      <?php else : ?>
-        <?php echo wpautop('Sorry, No posts were found'); ?>
-      <?php endif; ?>
-    </div>
-  </div>
 
 <?php get_footer(); ?>
