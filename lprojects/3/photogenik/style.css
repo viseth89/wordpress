@@ -39,6 +39,11 @@ header input {
   text-align: center;
 }
 
+.pic img {
+  width:100% !important;
+  height:100% !important;
+}
+
 footer {
   text-align: center;
   margin-top: 40px;
