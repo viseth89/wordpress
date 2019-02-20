@@ -1,0 +1,46 @@
+/* 
+  Theme Name: PhotoGenik
+  Author: Viseth Sen -> Brad Traversy at http://eduonix.com
+  Author URI: http://visethsen.com 
+  Description: Photo Gallery Theme
+  Version: 1.0.0
+*/
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style:none;
+}
+
+input {
+  color:#333;
+}
+
+/* Make images fit to 100% of container  */
+img {
+  width:100%;
+}
+header input {
+  margin-top: 15px;
+}
+
+.post {
+  padding:20px;
+}
+
+.pic {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  border-top: #333 solid 1px;
+}
