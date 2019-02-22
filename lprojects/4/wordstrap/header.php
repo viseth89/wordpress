@@ -28,11 +28,23 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <?php
+                wp_nav_menu(
+                    array(
 
+                        'theme_location'    => 'primary',
+                        'depth'             => 2,
+                        'container'         => false,
+                        'menu_class'        => 'nav navbar-nav',
+                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                        'walker'            => new wp_bootstrap_navwalker()
+                    )
+                );
+                ?>
                 <form class="navbar-form navbar-left">
 
                 </form>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-    </nav>
+    </nav> 
