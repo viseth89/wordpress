@@ -45,6 +45,8 @@
                     </article> <!-- End of Article -->
                     <?php endwhile; ?>
                     <?php endif; ?>
+
+                    <?php comments_template(); ?>
                 </div>
             </div>
         </div> <!-- End of Col 8-->
