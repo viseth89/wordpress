@@ -41,8 +41,14 @@
                     )
                 );
                 ?>
-                <form class="navbar-form navbar-left">
-
+                <form method='get' class="navbar-form navbar-left" role='search' action ="<?php echo esc_url(home_url('/')); ?>">
+                    <label for="navbar-search" class="sr-only"><?php _e('Search', 'textdomain'); ?></label>
+                    <div class="form-group">
+                        <input type="text" class='form-control' name="s" id="navbar-search">
+                    </div>
+                    <button class="btn btn-default" type="submit">
+                        <?php _e('Search', 'textdomain'); ?>
+                    </button>
                 </form>
 
             </div><!-- /.navbar-collapse -->
