@@ -16,3 +16,17 @@ function wpnews_theme_support(){
 }
 
 add_action('after_setup_theme', 'wpnews_theme_support');
+
+// Add support for widgets
+function init_widgets($id){
+  register_sidebar(array(
+    'name'  =>  'Sidebar',
+    'id'    =>  'sidebar',
+    'before_widget'   =>  '<div>',
+    'after_widget'    =>  '</div>',
+    'before_title'    =>  '<h3>',
+    'after_title'     =>  '</h3>'
+  ));
+}
+
+add_action('widgets_init', 'init_widgets');

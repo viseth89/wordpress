@@ -5,7 +5,10 @@
         <div class="panel">
             <div class="control-group append-button">
                 <div class="control all-100">
-                    <input type="text" name="s" placeholder='Search news...'>
+                    <form action="<?php echo esc_url(home_url('/')); ?>" method='get'>
+                        <input type="text" name="s" placeholder='Search news...'>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -23,10 +26,11 @@
                 <li class="slide xlarge-25 large-25 medium-33 small-50 tiny-100">
                     <?php the_post_thumbnail('news-thumb', array('class'  => 'half-bottom-space')); ?>
                     <div class="description">
-                    <h4 class="no-margin">
-                              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                
-                            </h4>
+                        <h4 class="no-margin">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title(); ?></a>
+
+                        </h4>
                         <h5 class="slab">
                             <?php the_time('F j, Y g:i a'); ?>
                         </h5>
@@ -57,15 +61,16 @@
 
                     <ul class="stage column-group half-gutters unstyled">
                         <?php $featured_query = new WP_Query(array(
-                          'category_name' => 'featured'
+                            'category_name' => 'featured'
                         )); ?>
 
                         <?php while ($featured_query->have_posts()): $featured_query->the_post(); ?>
                         <li class="slide xlarge-100 large-100 medium-100 small-100 tiny-100">
                             <?php the_post_thumbnail('news-large', array('class'  => 'half-bottom-space')); ?>
                             <h4 class="no-margin">
-                              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?></a>
+
                             </h4>
                             <h5 class="slab">
                                 <?php the_time('F j, Y g:i a'); ?>
@@ -102,8 +107,8 @@
                 <ul class="unstyled">
                     <?php
                     $args = array(
-                      'orderby' => 'comment_count',
-                      'posts_per_page'  =>  '3'
+                        'orderby' => 'comment_count',
+                        'posts_per_page'  =>  '3'
                     )
                     ?>
                     <?php $popular_query = new WP_Query($args); ?>
@@ -146,7 +151,7 @@
 
             <ul class="stage column-group half-gutters unstyled">
                 <?php $business_query = new WP_Query(array(
-                  'category_name' => 'business'
+                    'category_name' => 'business'
                 )); ?>
 
                 <?php while ($business_query->have_posts()): $business_query->the_post(); ?>
@@ -156,9 +161,10 @@
                     <?php the_post_thumbnail('news-thumb', array('class'  => 'half-bottom-space')); ?>
 
                     <h4 class="no-margin">
-                              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                
-                            </h4>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?></a>
+
+                    </h4>
                     <h5 class="slab">
                         <?php the_time('F j, Y g:i a'); ?>
                     </h5>
