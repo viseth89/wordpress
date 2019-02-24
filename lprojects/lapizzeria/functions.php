@@ -10,12 +10,16 @@ function lapizzeria_styles() {
   // Passing in normalize to Style
   wp_register_style('style', get_template_directory_uri() . '/style.css', array('normalize'), '1.0' );
 
-
-
   // Enqueue the style
   wp_enqueue_style('normalize');
   wp_enqueue_style('fontawesome');
   wp_enqueue_style('style');
+
+  // add JavaScript files
+  wp_register_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true );
+
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('script');
 }
 
 // Hook code into wordpress
