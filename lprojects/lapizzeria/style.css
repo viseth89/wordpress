@@ -246,3 +246,60 @@ nav.site-nav ul li.current_page_item a {
     display: none;
   }
 }
+
+/* 
+
+.banner {
+  background: url('../img/pageBcg/bannerBcg.jpeg') center/cover fixed no-repeat;
+  min-height: calc(100vh - 101px);
+}
+From Master/furniture/v, : Notice the shorthand notation 
+*/
+
+/* Hero Image */
+.hero{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  height:450px;
+  display:table;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+/* Making background image transparent  */
+.hero::after{
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.hero .hero-content {
+  display: table-cell;
+  vertical-align: middle;
+  color: #ffffff;
+  z-index: 2;
+  position:relative;
+  /* 
+  z-index places this item above previous content
+  position:relative also works with z-index so the font will be #ffffff vs the color from '.hero::after'
+  */
+}
+
+@media only screen and (min-width:768px){
+  .hero-text{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .hero-text{
+    width: 60%;
+  }
+}
