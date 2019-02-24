@@ -70,6 +70,9 @@ h4 {
   display: none;
 }
 
+.text-center {
+  text-align:center;
+}
 /* HEADER */
 
 header.site-header {
@@ -302,4 +305,21 @@ From Master/furniture/v, : Notice the shorthand notation
   .hero-text{
     width: 60%;
   }
+}
+
+.main-content{
+  background-color:#ffffff;
+  padding:60px;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-content {
+    margin-top: -90px;
+  }
+}
+
+.content-text P {
+  font-size: 18px;
+  line-height: 50px;
 }
