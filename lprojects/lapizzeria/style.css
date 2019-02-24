@@ -105,3 +105,83 @@ div.address p {
     text-align: right;
   }
 }
+
+/* Social Menu */
+nav.socials ul {
+ list-style:none !important;;
+ text-decoration:none !important;;
+ text-align: center;
+ padding: 0; 
+ color:red;
+}
+
+@media only screen and (min-width:768px) {
+  nav.socials ul {
+    float:right;
+  }
+}
+
+nav.socials ul li {
+  position: relative;
+  display:inline-block;
+}
+
+nav.socials ul li a:before{
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  content: '\f08e';
+  font-size: 30px;
+  color: #000000;
+  -webkit-font-smoothing: antialiazed;
+
+}
+
+nav.socials li a[href*="facebook.com"]::before{
+  content:'\f09a';
+}
+nav.socials li a[href*="twitter.com"]::before{
+  content:'\f099';
+}
+nav.socials li a[href*="pinterest.com"]::before{
+  content:'\f231';
+}
+nav.socials li a[href*="youtube.com"]::before{
+  content:'\f16a';
+}
+nav.socials li a[href*="instagram.com"]::before{
+  content:'\f16d';
+}
+
+/* Main Menu */
+nav.site-nav{
+
+}
+nav.site-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:100%;
+  display:table;
+}
+
+nav.site-nav ul li{
+  display:table-cell;
+  width:1%;
+}
+
+nav.site-nav ul li a{
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#000000;
+  font-family: Arial, Helvetica;
+}
+
+nav.site-nav ul li.current_page_item a{
+  border-bottom: 8px solid #a61206;
+}
