@@ -14,7 +14,8 @@
 <body>
     <!-- Escape function added to home url -->
     <header class="site-header">
-        <div class="logo">
+      <div class="container">
+      <div class="logo">
             <a href="<?php echo esc_url(home_url('/')); ?>">
                 <img src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="Logo" class='logoimage'>
             </a>
@@ -43,6 +44,7 @@
                 <p>Phone Number +1 92-456-7890</p>
             </div>
         </div><!-- Header Information-->
+      </div><!-- Container -->
     </header>
 
     <!-- Adding Menu/Navigation -->
