@@ -162,15 +162,56 @@ h2 {
   }
 }
 
-.categories .btn-primary {
+.categories .btn-primary, 
+.ecommerce-cat{
   border-left: 10px solid var(--blue);
 }
-.categories .btn-warning {
+.categories .btn-warning,
+.wordpress-cat {
   border-left: 10px solid var(--yellow);
 }
-.categories .btn-success {
+.categories .btn-success,
+.web-design-cat{
   border-left: 10px solid var(--green);
 }
-.categories .btn-info {
+.categories .btn-info,
+.web-developement-cat{
   border-left: 10px solid var(--purple);
+}
+
+/* Conferences List */
+.list-group-item.active,
+.list-group-item.active:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.list-group-item:hover {
+  background-color: var(--white);
+}
+
+.conference-wrapper .image {
+  margin-right: 1rem;
+}
+
+.conference-info {
+  font-size:1.2rem;
+  color:var(--black);
+}
+.conference-info .badge{
+  font-size: 1rem;
+  font-weight:400;
+}
+
+.conference-info .badge-primary{
+  background-color: var(--blue);
+}
+.conference-info .title,
+.conference-info .speaker {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.conference-info .speaker span {
+  font-weight: 300;
 }
