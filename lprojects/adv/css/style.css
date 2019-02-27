@@ -215,3 +215,21 @@ h2 {
 .conference-info .speaker span {
   font-weight: 300;
 }
+
+/* Speakers */
+.speaker-list .speaker-image {
+  overflow:hidden;
+}
+.speaker-list img {
+  transition: transform .3s ease-out;
+}
+.speaker-list img:hover {
+  transform: scale(1.2);
+}
+.speaker-info h3{
+  color: var(--yellow);
+  font-weight: 700;
+}
+.speaker-info p {
+  font-size: 1rem;
+}
