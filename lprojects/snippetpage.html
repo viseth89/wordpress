@@ -113,10 +113,11 @@
 
     <h2 class='py-5 text-center'>Wordpress Tips</h2>
     <div class="container">
+        <h2 class='pt-5 text-center'>Initial Theme Setup</h2>
+        <h4 class='pb-5 text-center'>Step 1</h4>
       <div class="row">
         <div class="col-md-6">
-          <h3>Initial Setup</h3>
-          <h4>Step 1</h4>
+
           <ol>
             <li>Begin by going to "app/public/wp-content/themes"</li>
             <li>Delete Unused themes, make sure not to delete active theme :)</li>
@@ -149,14 +150,19 @@
           <p> example of information in theme css </p>
           <p>considering 3 to 9 on large screen for columns, and 12 on anything less maybe;</p>
         </div>
-      </div>
+      </div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facilis laboriosam odio corporis! Laborum
+      exercitationem quae quo pariatur molestiae voluptatibus.
 
-      <h3>Theme Setup</h3>
-      <h4>Step 2</h4>
+      <h2 class='pt-5 text-center'>Theme Setup</h2>
+      <h4 class='pb-5 text-center'>Step 2</h4>
       <div class="row">
         <div class="col-md-6">
           <ol>
-            <li></li>
+            <li>page.php - Pages</li>
+            <li>single.php - Posts</li>
+            <li>header.php - Head of HTML Document</li>
+            <li>footer.php - Footer of HTML Document Insert WP Admin Bar</li>
+            <li>functions.php - Add Stylesheets and JS and Widgets, etc here</li>
           </ol>
         </div>
         <div class="col-md-6">
@@ -181,6 +187,109 @@
           <p>considering 3 to 9 on large screen for columns, and 12 on anything less maybe;</p>
         </div>
       </div>
+  </section>
+
+  <section class="Wordpress-Structure">
+    <div class="container">
+      <h2 class='py-5 text-center'>Wordpress Structure</h2>
+      <div class="row">
+        <div class="col-md-4 italics">
+          <h5 class='text-center'>Posts -> single.php</h5>
+          <ol>
+            <li>This templated is used for posts</li>
+            <li>If not available -> will fall back to index.php for template</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>Pages -> page.php</h5>
+          <ol>
+            <li>This templated is used for pages</li>
+            <li>If not available -> will fall back to index.php for template</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>Header/Footer</h5>
+          <ol>
+            <li>Appropriately named header.php & footer.php</li>
+            <li>Enter PHP mode -> </li>
+            <li>Call into pages with "get_header(); or get_footer();"</li>
+            <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
+            <li>This will enable WP Admin Bar</li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
+
+      <h2 class='py-5 text-center'>CSS/JS Setup for WordPress</h2>
+
+      <div class="row">
+        <div class="col-md-6">
+          <ol>
+            <li>In PHP tags insert "wp_head();" : This will allow WP to handle the meta/head information</li>
+            <li>Create a functions.php file</li>
+            <li>Use function "add_action('arguement1, 'arguement2');</li>
+            <li>Create function 'arguement2()'</li>
+            <li>'wp_enqueue_style('university_main_styles', get_stylesheet_uri());</li>
+          </ol>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Header File</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Functions File</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">File 3</a>
+            </li>
+    
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Wordpress-Loops">
+    <div class="container">
+      <h2 class='py-5 text-center'>Wordpress Loops</h2>
+      <div class="row">
+        <div class="col-md-4 italics">
+          <h5>Posts</h5>
+          <i>
+            <p>while(have_posts()) { </p>
+            <p>the_post()</p>
+            <p>?php the_title() ?php</p>
+          </i>
+          <i>
+            <p>}</p>
+          </i>
+          <p>Loop that goes through each post</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Permalink</h5>
+          <p>the_permalink()</p>
+          <p>Used for links in conjuction with items such as "the_title()"</p>
+
+        </div>
+        <div class="col-md-4">
+          <h5>Arrays</h5>
+          <ol>
+            <li>Arrays is the PHP version of Python List</li>
+            <li>Arrays = Collection</li>
+            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+            <li>echo $names[0] = "Viseth"</li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
+    </div>
   </section>
 
 
