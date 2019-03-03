@@ -223,6 +223,38 @@
         </div>
       </div> <!-- Row -->
 
+      <h2 class='py-5 text-center'>Wordpress Structure 2</h2>
+      <div class="row">
+        <div class="col-md-4 italics">
+          <h5 class='text-center'>Interior Page Template</h5>
+          <ol>
+            <li>This templated is used for posts</li>
+            <li>If not available -> will fall back to index.php for template</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>Pages -> page.php</h5>
+          <ol>
+            <li>This templated is used for pages</li>
+            <li>If not available -> will fall back to index.php for template</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>Header/Footer</h5>
+          <ol>
+            <li>Appropriately named header.php & footer.php</li>
+            <li>Enter PHP mode -> </li>
+            <li>Call into pages with "get_header(); or get_footer();"</li>
+            <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
+            <li>This will enable WP Admin Bar</li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
+
       <h2 class='py-5 text-center'>CSS/JS Setup for WordPress</h2>
 
       <div class="row">
@@ -246,10 +278,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">File 3</a>
             </li>
-    
           </ul>
-
-
         </div>
       </div>
     </div>
@@ -360,6 +389,44 @@
     </div> <!-- Row -->
   </section>
 
+
+<!-- Sass -->
+  <section class="Wordpress-Loops">
+    <div class="container">
+      <h2 class='py-5 text-center'>Sass</h2>
+      <div class="row">
+        <div class="col-md-4 italics">
+          <h5>main.scss</h5>
+          <i>
+            <p>while(have_posts()) { </p>
+            <p>the_post()</p>
+            <p>?php the_title() ?php</p>
+          </i>
+          <i>
+            <p>}</p>
+          </i>
+          <p>Loop that goes through each post</p>
+        </div>
+        <div class="col-md-4">
+          <h5>node-sass</h5>
+          <p>the_permalink()</p>
+          <p>Used for links in conjuction with items such as "the_title()"</p>
+
+        </div>
+        <div class="col-md-4">
+          <h5>Arrays</h5>
+          <ol>
+            <li>Arrays is the PHP version of Python List</li>
+            <li>Arrays = Collection</li>
+            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+            <li>echo $names[0] = "Viseth"</li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
+    </div>
+  </section>
 </body>
 
 </html>
