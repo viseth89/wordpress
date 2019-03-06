@@ -17,3 +17,14 @@ function lapizzeria_styles(){
 add_action('wp_enqueue_scripts', 'lapizzeria_styles');
 
 
+// Add Menus
+function lapizzeria_menus() {
+  register_nav_menus(array(
+    // name given to menu => more readable presentable name , text domain arguement
+    'header-menu' => __('Header Menu', 'lapizzeria'),
+    'social-menu' => __('Social Menu', 'lapizzeria')
+  ));
+}
+
+// php hook -> init is a hook that will run when wp initializes
+add_action('init', 'lapizzeria_menus');

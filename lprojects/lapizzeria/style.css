@@ -10,10 +10,6 @@
   Text Domain : La Pizzeria
 */
 
-body {
-  background-color:red;
-}
-
-h1 {
-  color:blue;
+.sr-text {
+  display:none;
 }
