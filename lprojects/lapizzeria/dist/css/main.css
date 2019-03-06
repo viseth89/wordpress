@@ -1,0 +1,129 @@
+body {
+  background: #444; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 24px; }
+
+.clear,
+.clear::after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto; }
+
+.sr-text {
+  display: none; }
+
+/* Header */
+header.site-header {
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 30px; }
+
+div.logo {
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  div.logo {
+    text-align: left; } }
+
+@media only screen and (min-width: 992px) {
+  div.logo {
+    text-align: center; } }
+
+img.logoimage {
+  width: 250px; }
+
+@media only screen and (min-width: 768px) {
+  header.site-header .container {
+    position: relative; }
+  /* Placing social menu in top right corner, note the use of position absolute with top/right  */
+  header.site-header .header-information {
+    position: absolute;
+    top: 0;
+    right: 0; } }
+
+div.address {
+  display: block;
+  clear: both;
+  padding-top: 10px; }
+
+div.address p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center; }
+
+/* This should probably be combined with media query above, will look into further vs sass */
+@media only screen and (min-width: 768px) {
+  div.address p {
+    text-align: right; } }
+
+/* Social Menu */
+nav.socials ul {
+  list-style: none;
+  text-align: center;
+  padding: 0; }
+
+@media only screen and (min-width: 768px) {
+  nav.socials ul {
+    float: right; } }
+
+nav.socials ul li a:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  content: '\f08e';
+  font-size: 30px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased; }
+
+nav.socials ul li {
+  position: relative;
+  display: inline-block;
+  /* Makes social menu in top right display horizontal */ }
+
+nav.socials li a[href*="facebook.com"]::before {
+  content: '\f09a'; }
+
+nav.socials li a[href*="twitter.com"]::before {
+  content: '\f099'; }
+
+nav.socials li a[href*="pinterest.com"]::before {
+  content: '\f231'; }
+
+nav.socials li a[href*="youtube.com"]::before {
+  content: '\f16a'; }
+
+nav.socials li a[href*="instagram.com"]::before {
+  content: '\f16d'; }
+
+/* Styling the Main Menu */
+nav.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table; }
+
+nav.site-nav ul li {
+  display: table-cell;
+  width: 1%; }
