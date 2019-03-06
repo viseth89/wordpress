@@ -113,8 +113,8 @@
 
     <h2 class='py-5 text-center'>Wordpress Tips</h2>
     <div class="container">
-        <h2 class='pt-5 text-center'>Initial Theme Setup</h2>
-        <h4 class='pb-5 text-center'>Step 1</h4>
+      <h2 class='pt-5 text-center'>Initial Theme Setup</h2>
+      <h4 class='pb-5 text-center'>Step 1</h4>
       <div class="row">
         <div class="col-md-6">
 
@@ -254,6 +254,39 @@
           <p></p>
         </div>
       </div> <!-- Row -->
+      <h2 class='py-5 text-center'>Wordpress Structure 3</h2>
+      <div class="row">
+        <div class="col-md-4 italics">
+          <h5 class='text-center'>Config</h5>
+          <ol>
+            <li>Debug set to either true or false</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>functions.php</h5>
+          <ol>
+            <li>Add Css</li>
+            <li>Add Menus</li>
+            <li>Create Different Sizes for images</li>
+            <li>Add JS</li>
+            <li>Add Widgets</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>Header/Footer</h5>
+          <ol>
+            <li>Appropriately named header.php & footer.php</li>
+            <li>Enter PHP mode -> </li>
+            <li>Call into pages with "get_header(); or get_footer();"</li>
+            <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
+            <li>This will enable WP Admin Bar</li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
 
       <h2 class='py-5 text-center'>CSS/JS Setup for WordPress</h2>
 
@@ -295,6 +328,43 @@
             <p>the_post()</p>
             <p>?php the_title() ?php</p>
           </i>
+          <i>
+            <p>}</p>
+          </i>
+          <p>Loop that goes through each post</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Permalink</h5>
+          <p>the_permalink()</p>
+          <p>Used for links in conjuction with items such as "the_title()"</p>
+
+        </div>
+        <div class="col-md-4">
+          <h5>Arrays</h5>
+          <ol>
+            <li>Arrays is the PHP version of Python List</li>
+            <li>Arrays = Collection</li>
+            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+            <li>echo $names[0] = "Viseth"</li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
+    </div>
+  </section>
+
+  <section class="Wordpress-To Know">
+    <div class="container">
+      <h2 class='py-5 text-center'>Wordpress Loops</h2>
+      <div class="row">
+        <div class="col-md-4 ">
+          <h5>the_title() vs get_the_title</h5>
+          <ol>
+            <li>the_title() handles echo</li>
+            <li>get_the_title() doesn't echo</li>
+            <li>Returns value, and we use as fit;</li>
+          </ol>
           <i>
             <p>}</p>
           </i>
@@ -390,7 +460,7 @@
   </section>
 
 
-<!-- Sass -->
+  <!-- Sass -->
   <section class="Wordpress-Loops">
     <div class="container">
       <h2 class='py-5 text-center'>Sass</h2>
