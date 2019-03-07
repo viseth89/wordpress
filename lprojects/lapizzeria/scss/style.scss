@@ -317,12 +317,27 @@ nav.site-nav {
 
 .single-box img {
   width: 100%;
+  display: block;
 }
 
 .single-box {
   // grid must be manually assigned it is not inherited!!
   display: grid;
   grid-template-columns: 2fr 3fr;
+  color: white;
+  text-align: center;
+}
+
+.single-box:nth-child(1) {
+  background-color: #f19f30;
+}
+
+.single-box:nth-child(2) {
+  background-color: #127427;
+}
+
+.single-box:nth-child(3) {
+  background-color: #a61206;
 }
 
 .box-information {
@@ -331,12 +346,97 @@ nav.site-nav {
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
 
+    // Used to allow fields to display top and bottom proportionately
     .single-box {
-      grid-template-columns:unset;
-      grid-template-rows: 1fr 1fr; 
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    // Used to swap 2nd column 'craft beer' and image for style
+    .single-box:nth-child(2) img {
+      order: 2;
+    }
+
+    .single-box:nth-child(2) img {
+      order: 1;
     }
   }
 
-
 }
 
+.content-box {
+  display: grid;
+  grid-template-rows: 10% 20% 60% 10%;
+  grid-template-areas: "."
+    "top"
+    "text"
+    ".";
+
+  h3 {
+    grid-area: top;
+    margin: 5px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  p {
+    grid-area: text;
+  }
+
+  // An asterisk ( i.e. "*" ) is used to denote a CSS universal selector. An asterisk can also be followed by a selector. This is useful when you want to set a style for of all the elements of an HTML page or for all of the elements within an element of an HTML page.
+  * {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-box {
+    grid-template-rows: 20% 30% 30% 20%
+  }
+}
+
+// FOOTER
+
+footer {
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #c1c1c1;
+  text-align:center;
+
+  nav ul {
+    list-style: none;
+
+    li {
+      display: inline;
+
+      // Note use of '&' 
+      &:last-child .separator {
+        display: none;
+      }
+
+      a {
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+
+      }
+    }
+  }
+
+  .location {
+    margin-top: 30px;
+  }
+
+  p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    // Note the use of "&" to attach ".copyright"
+    &.copyright {
+      margin-top: 20px;
+    }
+
+  }
+}
