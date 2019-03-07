@@ -44,7 +44,10 @@
     </header>
 
     <div class="main-menu">
-        <div class="navigation">
+        <div class="mobile-menu">
+            <a href="#" class="mobile"><i class="fa fa-bars"></i>Menu </a>
+        </div>
+        <div class="container navigation">
             <?php
             $args = array(
               'theme_location'  =>  'header-menu',

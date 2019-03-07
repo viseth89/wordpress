@@ -1,10 +1,16 @@
 // https://www.youtube.com/watch?v=gYzHS-n2gqU&t=943s
 // Sass npm, node-sass, npm init, 15:00 minute mark 
 // Transferring Css to Sass test
+
+$primaryColor:#a61206;
+
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -12,7 +18,7 @@ h1 {
   font-size: 48px;
 }
 
-h2{
+h2 {
   font-size: 40px;
 }
 
@@ -26,7 +32,7 @@ h4 {
 
 .clear,
 .clear::after {
-  content:'';
+  content: '';
   clear: both;
   display: block;
 }
@@ -38,7 +44,7 @@ h4 {
 }
 
 .sr-text {
-  display:none;
+  display: none;
 }
 
 /* Header */
@@ -57,11 +63,13 @@ div.logo {
     text-align: left;
   }
 }
+
 @media only screen and (min-width:992px) {
   div.logo {
     text-align: center;
   }
 }
+
 img.logoimage {
   width: 250px;
 }
@@ -70,6 +78,7 @@ img.logoimage {
   header.site-header .container {
     position: relative;
   }
+
   /* Placing social menu in top right corner, note the use of position absolute with top/right  */
   header.site-header .header-information {
     position: absolute;
@@ -77,6 +86,7 @@ img.logoimage {
     right: 0;
   }
 }
+
 div.address {
   display: block;
   clear: both;
@@ -107,7 +117,7 @@ nav.socials ul {
 }
 
 @media only screen and (min-width:768px) {
- nav.socials ul {
+  nav.socials ul {
     float: right;
 
   }
@@ -131,55 +141,92 @@ nav.socials ul li {
 }
 
 nav.socials li a[href*="facebook.com"]::before {
-  content:'\f09a';
+  content: '\f09a';
 }
+
 nav.socials li a[href*="twitter.com"]::before {
-  content:'\f099';
+  content: '\f099';
 }
+
 nav.socials li a[href*="pinterest.com"]::before {
-  content:'\f231';
+  content: '\f231';
 }
+
 nav.socials li a[href*="youtube.com"]::before {
-  content:'\f16a';
+  content: '\f16a';
 }
+
 nav.socials li a[href*="instagram.com"]::before {
-  content:'\f16d';
+  content: '\f16d';
 }
 
 /* Styling the Main Menu */
 
 // Turned into sass here have not edited code below this line yet 
 
-nav.site-nav{
-  
-}
-nav.site-nav ul {
-  list-style:none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: table;
+nav.site-nav {
+  display: none;
 
-  li {
-    display:table-cell;
-    width:1%;
+  // Note how we are using the media query inside the selector
+  @media only screen and (min-width: 768px) {
+    display: block // Only one set of curly backets as we did not declared another selector inside the query
   }
 
-  li a{
-    text-align: center;
-    padding: 20px 0;
-    // Padding doesn't display until display block is used ****
-    display: block;
-    font-weight: bold;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+
+
+    @media only screen and (min-width: 768px) {
+      li {
+        display: table-cell;
+        width: 1%;
+      }
+    }
+
+    li a {
+      text-align: center;
+      padding: 20px 0;
+      // Padding doesn't display until display block is used ****
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000000;
+      font-family: arial, helvetica;
+    }
+
+    li.current_page_item a {
+      border-bottom: 8px solid $primaryColor;
+    }
+  }
+}
+
+// Responsive Menu Button
+// Note how we subtracted one from max-width px
+@media only screen and (max-width: 767px) {
+  .mobile-menu a {
+    height: 40px;
+    line-height: 40px;
+    // will cut in half if we only have one line of text**
     text-decoration: none;
+    background-color: $primaryColor;
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
     text-transform: uppercase;
-    color: #000000;
     font-family: arial, helvetica;
+
   }
 }
 
-// nav.site-nav ul li {
-//   display:table-cell;
-//   width: 1%;
-// }
-
+@media only screen and (min-width: 768px) {
+  .mobile-menu a {
+    display: none;
+  }
+}

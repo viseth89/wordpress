@@ -1,132 +1,89 @@
-/* 
-  Theme Name : La Pizzeria
-  Theme URI : http://visethsen.com
-  Author : Viseth Sen (Juan Pablo De la Torre)
-  Description : THeme for Restaraurants
-  Version : 1.0
-  License : GNU General Public License v2 or later
-  License URI : Http://www.gnu.org/license.glp-2.0.html
-  Tags : restaurant, mobile first, responsive, pizza
-  Text Domain : La Pizzeria
-*/
-
-
-/* 
-width:800, padding 40px 
-Border box = keeps padding within 800px, 
-Without padding will be outside 
-*/
 html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
 h1 {
-  font-size: 48px;
-}
+  font-size: 48px; }
 
-h2{
-  font-size: 40px;
-}
+h2 {
+  font-size: 40px; }
 
 h3 {
-  font-size: 28px;
-}
+  font-size: 28px; }
 
 h4 {
-  font-size: 24px;
-}
+  font-size: 24px; }
 
 .clear,
 .clear::after {
-  content:'';
+  content: '';
   clear: both;
-  display: block;
-}
+  display: block; }
 
 .container {
   max-width: 1100px;
   width: 100%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .sr-text {
-  display:none;
-}
+  display: none; }
 
 /* Header */
-
 header.site-header {
   border-bottom: 1px solid #c1c1c1;
-  padding-bottom: 30px;
-}
+  padding-bottom: 30px; }
 
 div.logo {
-  text-align: center;
-}
+  text-align: center; }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   div.logo {
-    text-align: left;
-  }
-}
-@media only screen and (min-width:992px) {
+    text-align: left; } }
+
+@media only screen and (min-width: 992px) {
   div.logo {
-    text-align: center;
-  }
-}
+    text-align: center; } }
+
 img.logoimage {
-  width: 250px;
-}
+  width: 250px; }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   header.site-header .container {
-    position: relative;
-  }
+    position: relative; }
   /* Placing social menu in top right corner, note the use of position absolute with top/right  */
   header.site-header .header-information {
     position: absolute;
     top: 0;
-    right: 0;
-  }
-}
+    right: 0; } }
+
 div.address {
   display: block;
   clear: both;
-  padding-top: 10px;
-}
+  padding-top: 10px; }
 
 div.address p {
   margin: 0;
   font-size: 14px;
-  text-align: center;
-}
+  text-align: center; }
 
 /* This should probably be combined with media query above, will look into further vs sass */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   div.address p {
-    text-align: right;
-
-  }
-}
+    text-align: right; } }
 
 /* Social Menu */
-
 nav.socials ul {
   list-style: none;
   text-align: center;
-  padding: 0;
+  padding: 0; }
 
-}
-
-@media only screen and (min-width:768px) {
- nav.socials ul {
-    float: right;
-
-  }
-}
+@media only screen and (min-width: 768px) {
+  nav.socials ul {
+    float: right; } }
 
 nav.socials ul li a:before {
   font-family: 'FontAwesome';
@@ -136,27 +93,70 @@ nav.socials ul li a:before {
   content: '\f08e';
   font-size: 30px;
   color: #000000;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 nav.socials ul li {
   position: relative;
   display: inline-block;
-  /* Makes social menu in top right display horizontal */
-}
+  /* Makes social menu in top right display horizontal */ }
 
 nav.socials li a[href*="facebook.com"]::before {
-  content:'\f09a';
-}
+  content: '\f09a'; }
+
 nav.socials li a[href*="twitter.com"]::before {
-  content:'\f099';
-}
+  content: '\f099'; }
+
 nav.socials li a[href*="pinterest.com"]::before {
-  content:'\f231';
-}
+  content: '\f231'; }
+
 nav.socials li a[href*="youtube.com"]::before {
-  content:'\f16a';
-}
+  content: '\f16a'; }
+
 nav.socials li a[href*="instagram.com"]::before {
-  content:'\f16d';
-}
+  content: '\f16d'; }
+
+/* Styling the Main Menu */
+nav.site-nav {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    nav.site-nav {
+      display: block; } }
+  nav.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table; }
+    @media only screen and (min-width: 768px) {
+      nav.site-nav ul li {
+        display: table-cell;
+        width: 1%; } }
+    nav.site-nav ul li a {
+      text-align: center;
+      padding: 20px 0;
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000000;
+      font-family: arial, helvetica; }
+    nav.site-nav ul li.current_page_item a {
+      border-bottom: 8px solid #a61206; }
+
+@media only screen and (max-width: 767px) {
+  .mobile-menu a {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    background-color: #a61206;
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: arial, helvetica; } }
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu a {
+    display: none; } }
