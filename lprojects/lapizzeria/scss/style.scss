@@ -6,12 +6,26 @@ $primaryColor:#a61206;
 
 html {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin:0;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
 }
 
 h1 {
@@ -196,7 +210,7 @@ nav.site-nav {
       text-decoration: none;
       text-transform: uppercase;
       color: #000000;
-      font-family: arial, helvetica;
+      font-family: 'Raleway', sans-serif;
     }
 
     li.current_page_item a {
@@ -220,7 +234,7 @@ nav.site-nav {
     text-align: center;
     font-size: 20px;
     text-transform: uppercase;
-    font-family: arial, helvetica;
+    font-family: 'Raleway', sans-serif;
 
   }
 }
