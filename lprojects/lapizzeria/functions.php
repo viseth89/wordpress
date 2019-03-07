@@ -1,5 +1,12 @@
 <?php
 
+// Add image support to pages
+function lapizzeria_setup() {
+  add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'lapizzeria_setup' );
+
 function lapizzeria_styles(){
   // Adding stylesheets
   wp_register_style('googlefont', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700,900', array(), '1.0.0');
