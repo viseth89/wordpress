@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  margin:0;
+  margin: 0;
 }
 
 *,
@@ -60,9 +60,10 @@ h4 {
 .sr-text {
   display: none;
 }
+
 // **
 .text-center {
-  text-align:center;
+  text-align: center;
 }
 
 /* Header */
@@ -253,7 +254,7 @@ nav.site-nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height:450px;
+  height: 450px;
   // adding display table to center the about us title
   display: table;
   margin: 0 auto;
@@ -271,7 +272,7 @@ nav.site-nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
 }
 
 .hero .hero-content {
@@ -288,6 +289,7 @@ nav.site-nav {
     margin: 0 auto;
   }
 }
+
 @media only screen and (min-width: 992px) {
   .hero-text {
     width: 60%;
@@ -301,7 +303,7 @@ nav.site-nav {
 }
 
 @media only screen and (min-width: 768px) {
-  .main-content{
+  .main-content {
     margin-top: -90px;
   }
 }
@@ -310,3 +312,31 @@ nav.site-nav {
   font-size: 18px;
   line-height: 50px;
 }
+
+// BOXES
+
+.single-box img {
+  width: 100%;
+}
+
+.single-box {
+  // grid must be manually assigned it is not inherited!!
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.box-information {
+  display: grid;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    .single-box {
+      grid-template-columns:unset;
+      grid-template-rows: 1fr 1fr; 
+    }
+  }
+
+
+}
+

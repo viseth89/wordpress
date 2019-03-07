@@ -224,3 +224,19 @@ nav.site-nav {
 .content-text p {
   font-size: 18px;
   line-height: 50px; }
+
+.single-box img {
+  width: 100%; }
+
+.single-box {
+  display: grid;
+  grid-template-columns: 2fr 3fr; }
+
+.box-information {
+  display: grid; }
+  @media screen and (min-width: 768px) {
+    .box-information {
+      grid-template-columns: repeat(3, 1fr); }
+      .box-information .single-box {
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr; } }
