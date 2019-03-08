@@ -26,7 +26,7 @@ get_header(); ?>
 <!-- Specialties Menu Selections -->
 <div class="our-specialties container">
     <h3 class="primary-text"> Pizzas</h3>
-    <div class="container-grid">
+    <div class="container-grid specialty-content">
         <?php $args = array(
           'post_type'       =>  'specialties',
           'posts_per_page'  =>  10,
@@ -60,7 +60,7 @@ get_header(); ?>
 
 <div class="our-specialties container">
     <h3 class="primary-text"> Others</h3>
-    <div class="container-grid">
+    <div class="container-grid specialty-content">
         <?php $args = array(
           'post_type'       =>  'specialties',
           'posts_per_page'  =>  10,
