@@ -229,6 +229,11 @@ nav.site-nav {
   }
 }
 
+// Keep menu highlighted when picking either pizzas or other
+.single-specialties nav.site-nav ul li.menu-item-27 a {
+  border-bottom: 8px solid $primaryColor;
+}
+
 // Responsive Menu Button
 // Note how we subtracted one from max-width px
 @media only screen and (max-width: 767px) {
@@ -525,3 +530,14 @@ img {
   }
 }
 
+// Single Specialty Template
+.single-specialties p.ingredients,
+.single-specialties p.price {
+  color:$primaryColor;
+  font-size: 30px;
+  margin: 0;
+
+  span {
+    color: #000;
+  }
+}

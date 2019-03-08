@@ -8,8 +8,8 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-
-<body>
+<!-- body_class is important for styling -->
+<body <?php body_class(); ?> >
 
     <header class="site-header">
         <div class="container">

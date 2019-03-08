@@ -161,6 +161,9 @@ nav.site-nav {
     nav.site-nav ul li.current_page_item a {
       border-bottom: 8px solid #a61206; }
 
+.single-specialties nav.site-nav ul li.menu-item-27 a {
+  border-bottom: 8px solid #a61206; }
+
 @media only screen and (max-width: 767px) {
   .mobile-menu a {
     height: 40px;
@@ -352,3 +355,12 @@ img {
   .specialty-content p {
     color: #3d3d3d;
     line-height: 30px; }
+
+.single-specialties p.ingredients,
+.single-specialties p.price {
+  color: #a61206;
+  font-size: 30px;
+  margin: 0; }
+  .single-specialties p.ingredients span,
+  .single-specialties p.price span {
+    color: #000; }

@@ -1,8 +1,8 @@
-<!-- THis is where the template for pages -->
-<?php get_header(); ?>
+<!-- THis is where the template for posts -->
+<?php 
+get_header();
+?>
 
-<!-- similar to sql = "select * from "  -->
-<!-- similar to django while/for loop -->
 <?php while (have_posts()) : the_post(); ?>
 
 <div class="hero" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>);">
@@ -15,11 +15,14 @@
 
 <div class="main-content container">
   <main class="text-center content-text">
+    <p class="ingredients">Ingredients:</p>
   <p><?php the_content(); ?> </p>    
+  <p class="price">Price: <span> $ <?php the_field('price'); ?> </span></p>
   </main>
 </div>
 
 <?php endwhile; ?>
 
-
-<?php get_footer(); ?> 
+<?php 
+get_footer();
+?>
