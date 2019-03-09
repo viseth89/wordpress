@@ -41,7 +41,8 @@ h4 {
   width: 100%;
   margin: 0 auto; }
 
-.sr-text {
+.sr-text,
+.screen-reader-text {
   display: none; }
 
 .text-center {
@@ -49,6 +50,25 @@ h4 {
 
 .primary-text {
   color: #a61206; }
+
+.button {
+  background-color: #a61206;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  width: auto;
+  border-radius: 8px;
+  color: #fff;
+  padding: 15px 80px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer; }
+
+.primary {
+  background-color: #a61206;
+  transition: background-color .5s ease; }
+  .primary:hover {
+    background-color: #7b0d04; }
 
 /* Header */
 header.site-header {
@@ -364,3 +384,84 @@ img {
   .single-specialties p.ingredients span,
   .single-specialties p.price span {
     color: #000; }
+
+article.entry {
+  margin-top: 30px; }
+
+header.entry-header {
+  margin-top: 20px; }
+  header.entry-header .date {
+    background-color: #f19f30;
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 20px; }
+    header.entry-header .date time {
+      font-size: 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700; }
+    header.entry-header .date span {
+      font-size: 16px;
+      display: block;
+      text-transform: uppercase; }
+  header.entry-header .entry-title {
+    float: right;
+    width: calc(100% - 90px); }
+  header.entry-header h2 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  header.entry-header p.author {
+    text-transform: uppercase;
+    color: #f19f30;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0; }
+
+p.author i {
+  font-size: 30px;
+  color: #f19f30; }
+
+div.entry-content p {
+  margin-bottom: 0;
+  line-height: 24px; }
+
+aside.sidebar {
+  margin-top: 3px; }
+
+form.searchform {
+  position: relative; }
+  form.searchform #searchsubmit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    background-color: #a61206;
+    text-indent: -9999px;
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none; }
+  form.searchform #s {
+    width: 100%;
+    padding: 10px; }
+
+.sidebar .widget {
+  margin-bottom: 20px; }
+  .sidebar .widget h3 {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase; }
+  .sidebar .widget ul {
+    list-style: none; }
+    .sidebar .widget ul li {
+      margin-bottom: 20px; }
+      .sidebar .widget ul li a {
+        color: #000;
+        text-decoration: none; }
+        .sidebar .widget ul li a:hover {
+          color: #f19f30; }
