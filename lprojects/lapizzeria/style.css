@@ -181,7 +181,8 @@ nav.site-nav {
     nav.site-nav ul li.current_page_item a {
       border-bottom: 8px solid #a61206; }
 
-.single-specialties nav.site-nav ul li.menu-item-27 a {
+.single-specialties nav.site-nav ul li.menu-item-27 a,
+nav.site-nav ul li.current_page_parent {
   border-bottom: 8px solid #a61206; }
 
 @media only screen and (max-width: 767px) {
@@ -402,10 +403,10 @@ header.entry-header {
       font-size: 30px;
       font-family: 'Raleway', sans-serif;
       font-weight: 700; }
-    header.entry-header .date span {
-      font-size: 16px;
-      display: block;
-      text-transform: uppercase; }
+      header.entry-header .date time span {
+        font-size: 16px;
+        display: block;
+        text-transform: uppercase; }
   header.entry-header .entry-title {
     float: right;
     width: calc(100% - 90px); }
@@ -420,6 +421,34 @@ header.entry-header {
     margin-top: 10px;
     font-family: 'Raleway', sans-serif;
     margin: 0; }
+
+.entry-information {
+  padding-top: 30px; }
+  .entry-information p.author {
+    text-transform: uppercase;
+    color: #f19f30;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    display: inline;
+    float: left;
+    margin-top: 40px; }
+  .entry-information .date {
+    background-color: #f19f30;
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 20px; }
+    .entry-information .date time {
+      font-size: 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700; }
+      .entry-information .date time span {
+        font-size: 16px;
+        display: block;
+        text-transform: uppercase; }
 
 p.author i {
   font-size: 30px;
@@ -465,3 +494,78 @@ form.searchform {
         text-decoration: none; }
         .sidebar .widget ul li a:hover {
           color: #f19f30; }
+
+.comment-respond h3 {
+  font-weight: 700;
+  text-align: center; }
+
+.comment-respond form label {
+  width: 200px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: bold; }
+
+@media only screen and (min-width: 768px) {
+  div.comments {
+    width: 80%; } }
+
+@media only screen and (min-width: 992px) {
+  div.comments {
+    width: 60%; } }
+
+label[for=wp-comment-cookies-consent],
+input#wp-comment-cookies-consent {
+  display: none !important; }
+
+.comment-respond form input,
+.comment-respond form textarea {
+  padding: 10px;
+  width: calc(100% - 220px);
+  font-size: 18px; }
+
+.comment-respond form input[type="submit"] {
+  margin: 0 auto;
+  display: inline-block;
+  border: none;
+  width: auto;
+  background-color: #a61206;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+p.form-submit {
+  text-align: center; }
+
+.comment-notes {
+  text-align: center; }
+
+p.logged-in-as a {
+  color: #a61206;
+  text-align: center;
+  display: block; }
+
+ol.commentlist {
+  list-style: none; }
+  ol.commentlist li.comment {
+    background-color: #e1e1e1;
+    padding: 20px;
+    margin-bottom: 20px; }
+    ol.commentlist li.comment cite {
+      color: #a61206;
+      font-size: 20px;
+      font-weight: bold; }
+
+li.comment .comment-author {
+  margin-bottom: 10px; }
+
+li.comment a {
+  color: #a61206;
+  text-decoration: none; }
+
+li.comment ul.children {
+  list-style: none; }
+  li.comment ul.children li {
+    background-color: #fff;
+    margin-top: 20px; }

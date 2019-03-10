@@ -254,7 +254,9 @@ nav.site-nav {
 }
 
 // Keep menu highlighted when picking either pizzas or other
-.single-specialties nav.site-nav ul li.menu-item-27 a {
+.single-specialties nav.site-nav ul li.menu-item-27 a,
+// Still tieing the connection between active class
+nav.site-nav ul li.current_page_parent {
   border-bottom: 8px solid $primaryColor;
 }
 
@@ -589,12 +591,12 @@ header.entry-header {
       font-size: 30px;
       font-family: 'Raleway', sans-serif;
       font-weight: 700;
-    }
 
-    span {
-      font-size: 16px;
-      display: block;
-      text-transform: uppercase;
+      span {
+        font-size: 16px;
+        display: block;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -616,6 +618,44 @@ header.entry-header {
     margin-top: 10px;
     font-family: 'Raleway', sans-serif;
     margin: 0;
+  }
+}
+
+
+.entry-information {
+  padding-top: 30px;
+
+  p.author {
+    text-transform: uppercase;
+    color: $secondaryColor;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    display: inline;
+    float: left;
+    margin-top: 40px;
+  }
+
+  .date {
+    background-color: $secondaryColor;
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 20px;
+
+    time {
+      font-size: 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+
+      span {
+        font-size: 16px;
+        display: block;
+        text-transform: uppercase;
+      }
+    }
   }
 }
 
@@ -683,6 +723,111 @@ form.searchform {
           color: $secondaryColor;
         }
       }
+    }
+  }
+}
+
+// Comments
+.comment-respond {
+  h3 {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  form label {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: bold;
+  }
+}
+
+div.comments {
+// Combining media queries
+  @media only screen and (min-width: 768px) {
+    width: 80%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    width: 60%;
+  }
+}
+
+// How to add styles for 'label for'
+// Removed checkbox and label for box
+label[for=wp-comment-cookies-consent],
+input#wp-comment-cookies-consent
+{
+
+    display:none !important;
+}
+
+.comment-respond form input,
+.comment-respond form textarea {
+  padding: 10px;
+  width: calc(100% - 220px);
+  font-size:18px;
+}
+
+.comment-respond form input[type="submit"] {
+  margin: 0 auto;
+  display: inline-block;
+  border:none;
+  width: auto;
+  background-color: $primaryColor;
+  font-size: 20px;
+  color: #fff;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+p.form-submit {
+  text-align: center;
+}
+
+.comment-notes {
+  text-align: center;
+}
+
+p.logged-in-as a {
+  color: $primaryColor;
+  text-align:center;
+  display:block;
+}
+
+// comment list
+ol.commentlist {
+  list-style: none;
+
+  li.comment {
+    background-color:#e1e1e1;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    cite {
+      color:$primaryColor;
+      font-size:20px;
+      font-weight: bold;
+
+
+    }
+  }
+}
+
+li.comment {
+  .comment-author {
+    margin-bottom: 10px;
+  }
+  a {
+    color:$primaryColor;
+    text-decoration: none;
+  }
+  ul.children {
+    list-style: none;
+    li {
+      background-color:#fff;
+      margin-top: 20px;
     }
   }
 }
