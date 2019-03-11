@@ -19,5 +19,23 @@ $(document).ready(function() {
     }
   })
 
+  // Fluidbox alternative implementation
+
+  $('.gallery a').fluidbox(); 
+  
+
+  // boxAdjustment();
+
+  // // Fluidbox Plugin
+
+  // jQuery('.gallery-icon a').each(function() {
+  //   console.log('test');
+  //   jQuery(this).attr({'data-fluidbox': ''});
+  // });
+
+  // if(jQuery('[data-fluidbox]').length > 0 ) {
+  //   jQuery('[data-fluidbox]').fluidbox();
+  // }
+
 
 });

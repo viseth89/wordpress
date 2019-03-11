@@ -70,6 +70,12 @@ h4 {
   .primary:hover {
     background-color: #7b0d04; }
 
+.secondary {
+  background-color: #f19f30;
+  transition: background-color .5s ease; }
+  .secondary:hover {
+    background-color: #da8b20; }
+
 /* Header */
 header.site-header {
   border-bottom: 1px solid #c1c1c1;
@@ -569,3 +575,31 @@ li.comment ul.children {
   li.comment ul.children li {
     background-color: #fff;
     margin-top: 20px; }
+
+#gallery-1 img {
+  border: none !important; }
+
+#gallery-1 .gallery-item {
+  width: 50% !important;
+  margin: 0;
+  padding: 0px 5px !important; }
+  @media only screen and (min-width: 768px) {
+    #gallery-1 .gallery-item {
+      width: 25% !important; } }
+
+.home div.hero {
+  height: 650px; }
+
+@media only screen and (min-width: 768px) {
+  .home .main-content {
+    margin-top: 0; }
+  .home .hero-text {
+    width: 50%; } }
+
+@media only screen and (min-width: 992px) {
+  .home .hero-text {
+    width: 40%; } }
+
+.home .hero-text {
+  line-height: 40px;
+  font-size: 18px; }

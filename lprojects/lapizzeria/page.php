@@ -14,7 +14,7 @@
 </div>
 
 <div class="main-content container">
-  <main class="text-center content-text">
+  <main class="text-center content-text clear">
   <p><?php the_content(); ?> </p>    
   </main>
 </div>

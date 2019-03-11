@@ -4,7 +4,7 @@
 
 $primaryColor:#a61206;
 $secondaryColor:#f19f30;
-
+// 
 html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
@@ -92,6 +92,14 @@ h4 {
 
   &:hover {
     background-color: #7b0d04;
+  }
+}
+
+.secondary {
+  background-color:$secondaryColor;
+  transition: background-color .5s ease;
+  &:hover {
+    background-color:#da8b20;
   }
 }
 
@@ -744,7 +752,8 @@ form.searchform {
 }
 
 div.comments {
-// Combining media queries
+
+  // Combining media queries
   @media only screen and (min-width: 768px) {
     width: 80%;
   }
@@ -757,29 +766,28 @@ div.comments {
 // How to add styles for 'label for'
 // Removed checkbox and label for box
 label[for=wp-comment-cookies-consent],
-input#wp-comment-cookies-consent
-{
+input#wp-comment-cookies-consent {
 
-    display:none !important;
+  display: none !important;
 }
 
 .comment-respond form input,
 .comment-respond form textarea {
   padding: 10px;
   width: calc(100% - 220px);
-  font-size:18px;
+  font-size: 18px;
 }
 
 .comment-respond form input[type="submit"] {
   margin: 0 auto;
   display: inline-block;
-  border:none;
+  border: none;
   width: auto;
   background-color: $primaryColor;
   font-size: 20px;
   color: #fff;
-  text-transform:uppercase;
-  cursor:pointer;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 p.form-submit {
@@ -792,8 +800,8 @@ p.form-submit {
 
 p.logged-in-as a {
   color: $primaryColor;
-  text-align:center;
-  display:block;
+  text-align: center;
+  display: block;
 }
 
 // comment list
@@ -801,13 +809,13 @@ ol.commentlist {
   list-style: none;
 
   li.comment {
-    background-color:#e1e1e1;
+    background-color: #e1e1e1;
     padding: 20px;
     margin-bottom: 20px;
 
     cite {
-      color:$primaryColor;
-      font-size:20px;
+      color: $primaryColor;
+      font-size: 20px;
       font-weight: bold;
 
 
@@ -819,15 +827,64 @@ li.comment {
   .comment-author {
     margin-bottom: 10px;
   }
+
   a {
-    color:$primaryColor;
+    color: $primaryColor;
     text-decoration: none;
   }
+
   ul.children {
     list-style: none;
+
     li {
-      background-color:#fff;
+      background-color: #fff;
       margin-top: 20px;
     }
   }
 }
+
+// Gallery
+
+#gallery-1 img {
+  border: none !important
+}
+
+
+#gallery-1 .gallery-item {
+  width: 50% !important;
+  margin: 0;
+  padding: 0px 5px !important;
+
+  @media only screen and (min-width: 768px) {
+    width: 25% !important;
+  }
+}
+
+// Front Page
+
+.home {
+  div.hero {
+    height: 650px;
+  }
+
+  @media only screen and (min-width:768px) {
+    .main-content {
+      margin-top: 0;
+    }
+    .hero-text {
+      width: 50%;
+    }
+
+  }
+  @media only screen and (min-width:992px) {
+    .hero-text {
+      width: 40%;
+    }
+  }
+
+  .hero-text {
+    line-height: 40px;
+    font-size: 18px;
+  }
+}
+
