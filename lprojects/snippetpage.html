@@ -72,7 +72,15 @@
           Images
         </div>
         <div class="col-md-4">
-          Gradient
+            // How to add styles for 'label for'
+            // Removed checkbox and label for box
+            label[for=wp-comment-cookies-consent],
+            input#wp-comment-cookies-consent
+            {
+            
+                display:none !important;
+            }
+            
         </div>
       </div> <!-- Row -->
 
@@ -80,10 +88,24 @@
       <div class="row">
 
         <div class="col-md-4">
-          <h5>Background</h5>
+          <h5>  p {
+              margin: 0 0 5px 0;
+              font-size: 14px;
+          
+              // Note the use of "&" to attach ".copyright"
+              &.copyright {
+                margin-top: 20px;
+              }
+          </h5>
         </div>
         <div class="col-md-4">
-          Images
+            li {
+              display: inline;
+        
+              // Note use of '&' 
+              &:last-child .separator {
+                display: none;
+              }
         </div>
         <div class="col-md-4">
           <h6>COmbining media queries</h6>
@@ -514,8 +536,46 @@
   </section>
 
 
+<!-- Sass -->
+<section class="Custom Post">
+  <div class="container">
+    <h2 class='py-5 text-center'>Custom Post Types </h2>
+    <div class="row">
+      <div class="col-md-4 italics">
+        <h5>main.scss</h5>
+        <i>
+          <p>while(have_posts()) { </p>
+          <p>the_post()</p>
+          <p>?php the_title() ?php</p>
+        </i>
+        <i>
+          <p>}</p>
+        </i>
+        <p>Loop that goes through each post</p>
+      </div>
+      <div class="col-md-4">
+        <h5>node-sass</h5>
+        <p>the_permalink()</p>
+        <p>Used for links in conjuction with items such as "the_title()"</p>
+
+      </div>
+      <div class="col-md-4">
+        <h5>Arrays</h5>
+        <ol>
+          <li>Arrays is the PHP version of Python List</li>
+          <li>Arrays = Collection</li>
+          <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+          <li>echo $names[0] = "Viseth"</li>
+        </ol>
+        <p></p>
+        <p></p>
+      </div>
+    </div> <!-- Row -->
+  </div>
+</section>
+
   <!-- Sass -->
-  <section class="Wordpress-Loops">
+  <section class="Sass">
     <div class="container">
       <h2 class='py-5 text-center'>Sass</h2>
       <div class="row">
@@ -551,6 +611,8 @@
       </div> <!-- Row -->
     </div>
   </section>
+
+  
 </body>
 
 </html>
