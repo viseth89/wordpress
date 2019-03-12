@@ -1,5 +1,10 @@
 <?php
 
+// Link or Import the database.php file
+
+require get_template_directory() . '/inc/database.php';
+require get_template_directory() . '/inc/reservations.php';
+
 // Add image support to pages
 function lapizzeria_setup() {
   add_theme_support('post-thumbnails');
