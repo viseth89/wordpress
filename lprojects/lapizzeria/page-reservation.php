@@ -17,10 +17,12 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="main-content container">
-    <main class="text-center content-text clear">
+<div class="main-content container reservation">
+    <main class="content-text clear">
+        <div class="reservation-info">
         <form action="" class="reservation-form" method="post">
             <h2>Make a reservation</h2>
+
             <div class="field">
                 <input type="text" name='name' , placeholder='Name' , required>
             </div>
@@ -40,6 +42,7 @@ get_header(); ?>
 
             <input type="hidden" name='hidden' value='1'>
         </form>
+        </div>
     </main>
 </div>
 <?php endwhile; ?>

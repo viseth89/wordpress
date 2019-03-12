@@ -4,6 +4,7 @@
 
 $primaryColor:#a61206;
 $secondaryColor:#f19f30;
+
 // 
 html {
   box-sizing: border-box;
@@ -96,10 +97,11 @@ h4 {
 }
 
 .secondary {
-  background-color:$secondaryColor;
+  background-color: $secondaryColor;
   transition: background-color .5s ease;
+
   &:hover {
-    background-color:#da8b20;
+    background-color: #da8b20;
   }
 }
 
@@ -860,6 +862,60 @@ li.comment {
   }
 }
 
+// Reservation Page 
+
+.reservation {
+  background-image: url(img/bg_contact.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+@media only screen and (min-width:768px) {
+  .reservation-info {
+    margin-left: 50%;
+  }
+}
+
+form.reservation-form {
+  h2{
+    font-size:20px;
+    font-weight: 700;
+  }
+
+  .field{
+    margin-bottom: 20px;
+    width: 100%;
+
+    input, textarea {
+      width:100%;
+      border: 3px solid #000000;
+      padding: 15px 10px;
+      font-size:16px;
+    }
+    textarea {
+      height:200px;
+    }
+  }
+
+  ::-webkit-input-placeholder{
+    color:#000000!important;
+  }
+  :moz-placeholder{
+    color:#000000!important;
+  }
+  ::moz-placeholder{
+    color:#000000!important;
+  }
+  ::-ms-input-placeholder{
+    color:#000000!important;
+  }
+
+  input[type='submit'] {
+    border:none;
+  }
+}
+
+
 // Front Page
 
 .home {
@@ -867,24 +923,95 @@ li.comment {
     height: 650px;
   }
 
+  .hero-text {
+    line-height: 40px;
+    font-size: 18px;
+  }
+
   @media only screen and (min-width:768px) {
     .main-content {
       margin-top: 0;
+      padding: 0;
     }
+
     .hero-text {
       width: 50%;
     }
 
   }
+
   @media only screen and (min-width:992px) {
     .hero-text {
       width: 40%;
     }
   }
+}
 
-  .hero-text {
-    line-height: 40px;
-    font-size: 18px;
+.specialty-content {
+  position: relative;
+  overflow: hidden;
+
+  padding: 0;
+
+
+
+  .information .price {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+
+  .information h3 {
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: 700;
+  }
+
+  .information {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(241, 159, 48, .75);
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+
+    p {
+      margin: 0 0 10px 0;
+      color: #fff;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &:hover .information {
+    top: 0;
+    opacity: 1
   }
 }
 
+@media only screen and (max-width:767px) {
+  .specialty-content{
+    overflow:visible;
+    display:block;
+    margin-bottom:30px;
+
+    // Notice how .information is INSIDE .specialty-content
+    .information {
+      position: relative;
+      opacity: 1;
+      background-color:$primaryColor;
+    }
+
+    // Notice how img is INSIDE .specialty-content but OUTSIDE .information
+    img {
+      width:100%;
+    }
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>V's Snippet</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900|Roboto:300,400,700,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+
+
+
+
+</head>
+
+<body>
+  <nav></nav>
+
+  <div class="jumbotron text-center">
+    <h1>Welcome to V's Sass Page</h1>
+    <h4>Making My Life Easier With Code I use In One Place</h4>
+    <p>Hi</p>
+  </div>
+
+
+
+  <section>
+    <div class="container">
+      <h2 class='pt-5 text-center'>Sass</h2>
+      <h4 class='pb-5 text-center'>Steps</h4>
+      <div class="row">
+
+        <div class="col-md-6">
+          <ol>
+            <li>Start by Installing npm sass</li>
+            <li>Configured package.json</li>
+            <li>Ensure scss path</li>
+            <li>Ensure css designation path</li>
+            <li>npm runn sass</li>
+          </ol>
+
+        </div>
+        <div class="col-md-6">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">Step 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">Step 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages"
+                aria-selected="false">Step 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+                aria-selected="false">Step 4</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <ol>
+                <li>npm init -> breeze through change if desired</li>
+                <li>npm install node-sass</li>
+                <li></li>
+              </ol>
+
+            </div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <h2>
+                <p><i> "scripts": {</i></p>
+                <p><i> "sass": "node-sass -w scss/ -o css/ --recursive"</i></p>
+                },
+              </h2>
+            </div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">Here we a setting the
+              path where our scss files will be located. </div>
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">Here we set where the
+              css files will be outputted to</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section>
+    <div class="container mb-5 pb-5">
+      <h2 class='pt-5 text-center'>Sass</h2>
+      <h4 class='pb-5 text-center'>Tips</h4>
+      <div class="row text-center">
+
+        <div class="col-md-8 offset-md-2">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#comb" role="tab" aria-controls="home"
+                aria-selected="true">Combining Css</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#hover" role="tab" aria-controls="profile"
+                aria-selected="false">&:hover</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#media" role="tab" aria-controls="messages"
+                aria-selected="false">media queries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#general" role="tab" aria-controls="settings"
+                aria-selected="false">my general structure</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="comb" role="tabpanel" aria-labelledby="home-tab">
+              <ol>
+                <li>$secondaryColor:#f19f30;</li>
+                <li></li>
+                <li></li>
+              </ol>
+
+            </div>
+            <div class="tab-pane" id="hover" role="tabpanel" aria-labelledby="profile-tab">
+              <h2>
+                <li>&:hover</li>
+                <li>Simplified way of adding hover effect</li>
+              </h2>
+            </div>
+            <div class="tab-pane" id="media" role="tabpanel" aria-labelledby="messages-tab">
+              <h4>Another Look at Media Quieries </h4>
+              <pre><code class="language-css">
+                  @media only screen and (max-width:767px) {
+                    .specialty-content{
+                      overflow:visible;
+                      display:block;
+                      margin-bottom:30px;
+                  
+                      // Notice how .information is INSIDE .specialty-content
+                      .information {
+                        position: relative;
+                        opacity: 1;
+                        background-color:$primaryColor;
+                      }
+                      
+                      //img is INSIDE .specialty-content but OUTSIDE .information
+                      img {
+                        width:100%;
+                      }
+                    }
+                  }
+
+              </code></pre>
+
+            </div>
+            <div class="tab-pane" id="general" role="tabpanel" aria-labelledby="settings-tab">My Structure
+
+              <pre><code class="language-css">
+                      // Front Page
+
+.home {
+  div.hero {
+    height: 650px;
+  }
+
+  @media only screen and (min-width:768px) {
+    .main-content {
+      margin-top: 0;
+      padding: 0;
+    }
+
+    .hero-text {
+      width: 50%;
+    }
+
+  }
+
+  @media only screen and (min-width:992px) {
+    .hero-text {
+      width: 40%;
+    }
+  }
+
+  .hero-text {
+    line-height: 40px;
+    font-size: 18px;
+  }
+}
+                    </code></pre>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+</body>
+
+</html>
