@@ -1,9 +1,11 @@
 <?php
 
 // Link or Import the database.php file
-
 require get_template_directory() . '/inc/database.php';
+// Reservation functions
 require get_template_directory() . '/inc/reservations.php';
+// Options for Theme
+require get_template_directory() . '/inc/options.php';
 
 // Add image support to pages
 function lapizzeria_setup() {
