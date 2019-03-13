@@ -81,11 +81,11 @@
 </section>
 
 <!-- Reservation Form -->
-<section class="location-reservation clear container">
+<section class="location-reservation clear">
     <div class="container-grid">
         <div class="columns2-4">
             <div id="map">
-map
+
             </div>
         </div>
         <div class="columns2-4">
@@ -95,5 +95,9 @@ map
         </div>
     </div>
 </section>
+
+
+
+
 
 <?php get_footer(); ?> 
