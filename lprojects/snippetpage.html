@@ -14,7 +14,8 @@
 
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900|Roboto:300,400,700,900" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
 
 
 </head>
@@ -134,14 +135,58 @@
       <h3>Cascde Style Sheet Tips 3</h3>
       <div class="row">
 
-        <div class="col-md-4">
-          <h5>Background</h5>
-        </div>
-        <div class="col-md-4">
-          Images
-        </div>
-        <div class="col-md-4">
-          Gradient
+          <div class="col-md-10 offset-md-1">
+          
+<!-- Nav tabs -->
+<ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#css1" role="tab" aria-controls="home"
+      aria-selected="true">Background</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#css2" role="tab" aria-controls="profile"
+      aria-selected="false">Images</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#css3" role="tab" aria-controls="messages"
+      aria-selected="false">Gradient</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#css4" role="tab" aria-controls="settings"
+      aria-selected="false">Step 4</a>
+  </li>
+</ul>
+<!-- End of Nav tabs -->
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="css1" role="tabpanel" aria-labelledby="home-tab">
+    <ol>
+      <li>Create a div with a class name</li>
+      <li>Select that class in css and use</li>
+      <li>
+        <pre><code class="language-css">
+background-image: url(img/bg_ingredients.jpg);
+      </code></pre>
+      </li>
+      <li></li>
+    </ol>
+
+  </div>
+  <div class="tab-pane" id="css2" role="tabpanel" aria-labelledby="profile-tab">
+    <h2>
+
+    </h2>
+  </div>
+  <div class="tab-pane" id="css3" role="tabpanel" aria-labelledby="messages-tab">Here we a setting the
+    path where our scss files will be located. 
+  </div>
+  <div class="tab-pane" id="css4" role="tabpanel" aria-labelledby="settings-tab">Here we set where the
+    css files will be outputted to
+  </div>
+</div>
+<!-- End of Tab Panes -->
+
         </div>
       </div> <!-- Row -->
   </section>
@@ -363,6 +408,47 @@
           <p></p>
         </div>
       </div> <!-- Row -->
+
+
+
+      <section class="wordpress-structure-5">
+        <h2 class='py-5 text-center'>Wordpress Structure 5</h2>
+      <div class="row">
+        <div class="col-md-4 italics">
+          <h5 class='text-center'>Extra DB</h5>
+          <ol>
+<li>created database.php file</li>
+<li>created reservations file to insert into db</li>
+<li>created options to display db</li>
+<li></li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>functions.php</h5>
+          <ol>
+            <li>Add Css</li>
+            <li>Add Menus</li>
+            <li>Create Different Sizes for images</li>
+            <li>Add JS</li>
+            <li>Add Widgets</li>
+          </ol>
+
+        </div>
+        <div class="col-md-4">
+          <h5 class='text-center'>Styles</h5>
+          <ol>
+            <li>Create Function </li>
+            <li>Enqueue the style = 'wp_enqueue_style('style');</li>
+            <li>php hook to add css</li>
+            <li>wp_head(); in header</li>
+            <li></li>
+          </ol>
+          <p></p>
+          <p></p>
+        </div>
+      </div> <!-- Row -->
+      </section>
 
       <h2 class='py-5 text-center'>CSS/JS Setup for WordPress</h2>
 
@@ -624,7 +710,14 @@
     </div>
   </section>
 
-  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 </body>
 
 </html>

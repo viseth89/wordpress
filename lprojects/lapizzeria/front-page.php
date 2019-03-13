@@ -53,9 +53,11 @@
     <div class="container">
         <div class="container-grid">
             <?php while (have_posts()) : the_post(); ?>
-            <div class="columns2-4">
+            <div class="columns2-4 image">
                 <h3><?php the_field('ingredients') ?></h3>
-                <?php the_field('ingredients_text'); ?>
+
+               <?php the_field('ingredients_text'); ?>
+
                 <?php $url = get_page_by_title('About Us'); ?>
                 <a href="<?php echo get_permalink($url->ID); ?>" class="button primary">Read More</a>
             </div>
@@ -63,7 +65,33 @@
                 <img src="<?php the_field('image') ?>" alt="Fresh Ingredients">
             </div>
 
-    <?php endwhile; ?>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</section>
+
+<!-- Must add clear to clear floats!!! -->
+<section class="container clear">
+    <h2 class="primary-text text-center">Gallery</h2>
+    <!-- Mind blown, will loook more into this get and echo -->
+    <?php
+        $url = get_page_by_title('Gallery');
+        echo get_post_gallery($url->ID);
+    ?>
+</section>
+
+<!-- Reservation Form -->
+<section class="location-reservation clear container">
+    <div class="container-grid">
+        <div class="columns2-4">
+            <div id="map">
+map
+            </div>
+        </div>
+        <div class="columns2-4">
+            <!-- Inserting custom template -->
+            <!-- file is 'reservation-form', odd way to split -->
+            <?php get_template_part('templates/reservation', 'form' );  ?>
         </div>
     </div>
 </section>

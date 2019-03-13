@@ -603,7 +603,8 @@ form.reservation-form h2 {
 form.reservation-form .field {
   margin-bottom: 20px;
   width: 100%; }
-  form.reservation-form .field input, form.reservation-form .field textarea {
+  form.reservation-form .field input,
+  form.reservation-form .field textarea {
     width: 100%;
     border: 3px solid #000000;
     padding: 15px 10px;
@@ -636,7 +637,7 @@ form.reservation-form input[type='submit'] {
 @media only screen and (min-width: 768px) {
   .home .main-content {
     margin-top: 0;
-    padding: 0; }
+    padding: 0 20px; }
   .home .hero-text {
     width: 50%; } }
 
@@ -688,3 +689,71 @@ form.reservation-form input[type='submit'] {
       background-color: #a61206; }
     .specialty-content img {
       width: 100%; } }
+
+section.ingredients {
+  background-image: url(img/bg_ingredients.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 50px;
+  padding: 80px 20px;
+  color: #fff; }
+  section.ingredients h3 {
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: 700; }
+  section.ingredients p {
+    line-height: 40px;
+    font-size: 20px; }
+  section.ingredients .image {
+    padding-top: 30px;
+    text-align: center; }
+    section.ingredients .image img {
+      width: 80%; }
+  @media only screen and (max-width: 767px) {
+    section.ingredients p,
+    section.ingredients h3 {
+      text-align: center; }
+    section.ingredients .button {
+      margin-bottom: 40px; } }
+
+section.location-reservation {
+  background-image: url(img/bg_ingredients.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 50px;
+  padding: 50px 0; }
+
+.home .reservation-info {
+  margin: 0;
+  color: #fff;
+  padding-right: 30px; }
+
+.home .reservation-form h2 {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 0 20 0;
+  font-weight: 900; }
+
+.home .reservation-form input,
+.home .reservation-form textarea {
+  background-color: transparent;
+  border: 4px solid #ffffff !important;
+  color: #ffffff !important; }
+
+.home .reservation-form input[type='submit'] {
+  background-color: #a61206;
+  border: none !important; }
+
+.home form.reservation-form ::-webkit-input-placeholder {
+  color: #fff !important; }
+
+.home form.reservation-form :moz-placeholder {
+  color: #fff !important; }
+
+.home form.reservation-form ::moz-placeholder {
+  color: #fff !important; }
+
+.home form.reservation-form ::-ms-input-placeholder {
+  color: #fff !important; }
