@@ -36,8 +36,10 @@
 
                 </div> <!-- end of Socials -->
                 <div class="address">
-                    <p>8179 Bay Avenue Moutain View, CA 94043</p>
-                    <p>Phone Number: +1-92-456-7890</p>
+                    <!-- Grab variables that were created in options.php -->
+                    <!-- Information needed to be echoed to be displayed -->
+                    <p> <?php echo esc_html(get_option('lapizzeria_location')); ?> </p>
+                    <p>Phone Number:  <?php echo esc_html(get_option('lapizzeria_phonenumber')); ?> </p>
                 </div>
             </div> <!-- end of header-information -->
         </div> <!-- end of container -->

@@ -9,12 +9,20 @@ function lapizzeria_options()
 
 add_action('admin_menu', 'lapizzeria_options');
 
+
+// Creating Options/Fields : connected with functions.php line #72
 function lapizzeria_settings()
 {
+    // Google Maps Group
     register_setting('lapizzeria_options_gmaps', 'lapizzeria_gmap_latitude');
     register_setting('lapizzeria_options_gmaps', 'lapizzeria_gmap_longitude');
     register_setting('lapizzeria_options_gmaps', 'lapizzeria_gmap_zoom');
     register_setting('lapizzeria_options_gmaps', 'lapizzeria_gmap_apikey');
+
+    // Information Group
+
+    register_setting('lapizzeria_options_info', 'lapizzeria_location');
+    register_setting('lapizzeria_options_info', 'lapizzeria_phonenumber');
 }
 add_action('init', 'lapizzeria_settings');
 
@@ -23,35 +31,60 @@ function lapizzeria_adjustments()
 <div class="wrap">
     <h1> La Pizzeria Adjustments </h1>
     <form action="options.php" method="post">
-        <?php
 
+        <!-- Options for Google Maps Input -->
+        <?php
         settings_fields('lapizzeria_options_gmaps');
         do_settings_sections('lapizzeria_options_gmaps');
         ?>
+
         <h2>Google Maps</h2>
         <table class="form-table">
             <tr valgin="top">
                 <th scope="row">Latitude</th>
                 <td>
-                    <input type="text" name="lapizzeria_gmap_latitude" value="<?php echo esc_attr( get_option('lapizzeria_gmap_latitude') ); ?>">
+                    <input type="text" name="lapizzeria_gmap_latitude" value="<?php echo esc_attr(get_option('lapizzeria_gmap_latitude')); ?>">
                 </td>
             </tr>
             <tr valgin="top">
                 <th scope="row">Longitude</th>
                 <td>
-                    <input type="text" name="lapizzeria_gmap_longitude" value="<?php echo esc_attr( get_option('lapizzeria_gmap_longitude') ); ?>">
+                    <input type="text" name="lapizzeria_gmap_longitude" value="<?php echo esc_attr(get_option('lapizzeria_gmap_longitude')); ?>">
                 </td>
             </tr>
             <tr valgin="top">
                 <th scope="row">Zoom Level:</th>
                 <td>
-                    <input type="number" max='21' min='12' name="lapizzeria_gmap_zoom" value="<?php echo esc_attr( get_option('lapizzeria_gmap_zoom') ); ?>">
+                    <input type="number" max='21' min='12' name="lapizzeria_gmap_zoom" value="<?php echo esc_attr(get_option('lapizzeria_gmap_zoom')); ?>">
                 </td>
             </tr>
             <tr valgin="top">
                 <th scope="row">API Key: </th>
                 <td>
-                    <input type="text" name="lapizzeria_gmap_apikey" value="<?php echo esc_attr( get_option('lapizzeria_gmap_apikey') ); ?>">
+                    <input type="text" name="lapizzeria_gmap_apikey" value="<?php echo esc_attr(get_option('lapizzeria_gmap_apikey')); ?>">
+                </td>
+            </tr>
+        </table>
+
+
+        <!-- Options for Other Adjustments -->
+        <?php
+        settings_fields('lapizzeria_options_info');
+        do_settings_sections('lapizzeria_options_info');
+        ?>
+        <h2>Other Adjustments</h2>
+
+        <table class="form-table">
+            <tr valgin="top">
+                <th scope="row">Address: </th>
+                <td>
+                    <input type="text" name="lapizzeria_location" value="<?php echo esc_attr(get_option('lapizzeria_location')); ?>">
+                </td>
+            </tr>
+            <tr valgin="top">
+                <th scope="row">Phone Number: </th>
+                <td>
+                    <input type="text" name="lapizzeria_phonenumber" value="<?php echo esc_attr(get_option('lapizzeria_phonenumber')); ?>">
                 </td>
             </tr>
         </table>
@@ -73,8 +106,10 @@ function lapizzeria_reservations()
                 <th class='manage-column'>ID</th>
                 <th class='manage-column'>Name</th>
                 <th class='manage-column'>Date of Reservation</th>
+                <th class='manage-column'>Email</th>
                 <th class='manage-column'>Phone Number</th>
                 <th class='manage-column'>Message</th>
+                <th class="manage-column">Delete</th>
             </tr>
         </thead>
 
@@ -94,6 +129,9 @@ function lapizzeria_reservations()
                 <td><?php echo $reservation['email']; ?></td>
                 <td><?php echo $reservation['phone']; ?></td>
                 <td><?php echo $reservation['message']; ?></td>
+                <td>
+                    <a href="#" class="remove_reservation" data-reservation="<?php echo $reservation['id'] ?>">Remove</a>
+                </td>
             </tr>
 
             <?php endforeach ?>

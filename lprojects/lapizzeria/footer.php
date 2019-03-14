@@ -1,6 +1,5 @@
-
 <footer>
-  <?php
+    <?php
     $args = array(
       'theme_location'  =>  'header-menu',
       'container'       =>  'nav',
@@ -8,17 +7,20 @@
     );
     wp_nav_menu($args);
 
-?>
+    ?>
 
-<div class="location">
-  <p>8179 Bay Avenue  Mountain View, CA 94043</p>
-  <p>Phone Number: +1-92-456-7890</p>
-</div>
+    <div class="location">
+        <!-- Grab variables that were created in options.php -->
+        <!-- Information needed to be echoed to be displayed -->
+        <p> <?php echo esc_html(get_option('lapizzeria_location')); ?> </p>
+        <p>Phone Number: <?php echo esc_html(get_option('lapizzeria_phonenumber')); ?> </p>
+    </div>
 
-<p class="copyright">All rights reserved <?php echo date('Y'); ?> </p>
+    <p class="copyright">All rights reserved <?php echo date('Y'); ?> </p>
 </footer>
 
 
 <?php wp_footer(); ?>
 </body>
-</html>
+
+</html> 

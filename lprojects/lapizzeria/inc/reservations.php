@@ -1,4 +1,31 @@
 <?php 
+
+function lapizzeria_delete_reservation() {
+    if($_POST['type'] == 'delete'):
+        global $wpdb;
+        $table = $wpdb->prefix . 'reservations';
+        $id_reservation = $_POST['id'];
+
+        $result = $wpdb->delete($table, array('id' => $id_reservation),array('%d'));
+
+        if($result ==1) {
+            $response = array(
+                'response' => 'success',
+                'id' => $id_reservation
+            );
+        } else {
+            $response = array(
+                'response' => 'error',
+                'id' => $id_reservation
+            );
+        }
+    endif;
+
+    die(json_encode($response));
+    // When using ajax and wordpress must use 'die' or will cause error
+}
+add_action('wp_ajax_lapizzeria_delete_reservation', 'lapizzeria_delete_reservation');
+
 function lapizzeria_save_reservation() {
   global $wpdb;
   if(isset($_POST['reservation']) && $_POST['hidden'] == "1") {
