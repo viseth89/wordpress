@@ -1,14 +1,20 @@
 var map;
 function initMap() {
+  /*
+  1.  Values are being passed in from options.php
+  2.  Values are being input by user and then will be output to JS to be Used with GoogleMaps
+  3.  Values are passed in as strings so we must parse as float
 
+  */
+  console.log(options);
   var latLng = {
-    lat: 41.6839731,
-    lng: -87.5361696
+    lat: parseFloat ( options.latitude ) ,
+    lng: parseFloat ( options.longitude )
   }
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: latLng,
-    zoom: 16
+    zoom: parseInt (options.zoom)
   });
 
   var marker = new google.maps.Marker({
