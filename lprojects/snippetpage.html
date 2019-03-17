@@ -29,784 +29,864 @@
     <p>Hi</p>
   </div>
 
-  <section class="Bootstrap Tips">
-    <div class="container">
-      <h3>Bootstrap Tips</h3>
-      <div class="row text-center">
-
-        <div class="col-md-4">
-          <h5>MT, PT</h5>
-        </div>
-        <div class="col-md-4">
-          Cards and Usage
-        </div>
-        <div class="col-md-4">
-          Flex here
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="CSS Tips">
-    <div class="container text-center">
-      <h2 class="py-5">Cascade Style Sheet Tips</h2>
-      <div class="row">
-
-        <div class="col-md-4">
-          <h5>Background</h5>
-        </div>
-        <div class="col-md-4">
-          Images
-        </div>
-        <div class="col-md-4">
-          Gradient
-        </div>
-      </div> <!-- Row -->
-
-      <h3>Cascade Style Sheet Tips 1</h3>
-      <div class="row">
-
-        <div class="col-md-4">
-          <h5>Background</h5>
-        </div>
-        <div class="col-md-4">
-          Images
-        </div>
-        <div class="col-md-4">
-          // How to add styles for 'label for'
-          // Removed checkbox and label for box
-          label[for=wp-comment-cookies-consent],
-          input#wp-comment-cookies-consent
-          {
-
-          display:none !important;
-          }
-
-        </div>
-      </div> <!-- Row -->
-
-      <h3>Cascade Style Sheet Tips 2</h3>
-      <div class="row">
-
-        <div class="col-md-4">
-          <h5> p {
-            margin: 0 0 5px 0;
-            font-size: 14px;
-
-            // Note the use of "&" to attach ".copyright"
-            &.copyright {
-            margin-top: 20px;
-            }
-          </h5>
-        </div>
-        <div class="col-md-4">
-          li {
-          display: inline;
-
-          // Note use of '&'
-          &:last-child .separator {
-          display: none;
-          }
-        </div>
-        <div class="col-md-4">
-          <h6>COmbining media queries</h6>
-          <h5>Will convert this </h5>
-          <p>div.comments {
-            // Combining media queries
-            @media only screen and (min-width: 768px) {
-
-            width: 80%;
-            background-color: green;
-
-            }
-
-            @media only screen and (min-width: 992px) {
-
-            width: 60%;
-            background-color: red;
-
-            }
-            }</p>
-        </div>
-      </div> <!-- Row -->
-    </div>
-
-
-
-
-
-
-    <div class="container text-center">
-      <h3>Cascde Style Sheet Tips 3</h3>
-      <div class="row">
-
-        <div class="col-md-10 offset-md-1">
-
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#css1" role="tab" aria-controls="home"
-                aria-selected="true">Background</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#css2" role="tab" aria-controls="profile"
-                aria-selected="false">Images</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#css3" role="tab" aria-controls="messages"
-                aria-selected="false">Gradient</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#css4" role="tab" aria-controls="settings"
-                aria-selected="false">Step 4</a>
-            </li>
-          </ul>
-          <!-- End of Nav tabs -->
-
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane active" id="css1" role="tabpanel" aria-labelledby="home-tab">
-              <ol>
-                <li>Create a div with a class name</li>
-                <pre><code class="language-js">
-                    <xmp>  
-<div class="background">
-  
-</div>
-                      </xmp>
-                </code>
-
-</pre>
-
-                <li>Select that class in css and use</li>
-                <li>
-                  <pre><code class="language-css">
-.background {
-  background-image: url(img/bg_ingredients.jpg);
-}
-      </code></pre>
-                </li>
-                <li></li>
-              </ol>
-
-            </div>
-            <div class="tab-pane" id="css2" role="tabpanel" aria-labelledby="profile-tab">
-              <h2>
-
-              </h2>
-            </div>
-            <div class="tab-pane" id="css3" role="tabpanel" aria-labelledby="messages-tab">Here we a setting the
-              path where our scss files will be located.
-            </div>
-            <div class="tab-pane" id="css4" role="tabpanel" aria-labelledby="settings-tab">Here we set where the
-              css files will be outputted to
-            </div>
-          </div>
-          <!-- End of Tab Panes -->
-
-        </div>
-      </div> <!-- Row -->
-  </section>
-
-
-
-  <!-- Js/Jquerry -->
-
-
-  <div class="container text-center">
-    <h3>JS/Jquery Style Tips 1</h3>
+  <div class="main container">
     <div class="row">
-
       <div class="col-md-10 offset-md-1">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="mainBootstrap-tab" data-toggle="tab" href="#mainBootstrap" role="tab"
+              aria-controls="home" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="mainCSS-tab" data-toggle="tab" href="#mainCSS" role="tab" aria-controls="profile"
+              aria-selected="false">mainCSS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="mainJSJQ-tab" data-toggle="tab" href="#mainJSJQ" role="tab" aria-controls="contact"
+              aria-selected="false">mainJSJQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Wordpress-tab" data-toggle="tab" href="#mainWordpress" role="tab" aria-controls="contact"
+              aria-selected="false">Wordpress</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Wordpress-tab" data-toggle="tab" href="#Structure1" role="tab" aria-controls="contact"
+              aria-selected="false">WP Structure</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Wordpress-tab" data-toggle="tab" href="#Structure2" role="tab" aria-controls="contact"
+              aria-selected="false">WP Structure 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Wordpress-tab" data-toggle="tab" href="#php" role="tab" aria-controls="contact"
+              aria-selected="false">PHP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="Wordpress-tab" data-toggle="tab" href="#php2" role="tab" aria-controls="contact"
+              aria-selected="false">PHP 2</a>
+          </li>
 
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#jsjq1" role="tab" aria-controls="home"
-              aria-selected="true">Test</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#jsjq2" role="tab" aria-controls="profile"
-              aria-selected="false">Images</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#jsjq3" role="tab" aria-controls="messages"
-              aria-selected="false">Gradient</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#jsjq4" role="tab" aria-controls="settings"
-              aria-selected="false">Step 4</a>
-          </li>
         </ul>
-        <!-- End of Nav tabs -->
+        <div class="tab-content" id="myTabContent">
+          <!-- Start of Bootstrap -->
+          <div class="tab-pane fade show active" id="mainBootstrap" role="tabpanel" aria-labelledby="home-tab">
+            <!-- Bootstrap Content -->
+            <section class="Bootstrap Tips">
+              <div class="container text-center">
+                <h3>Bootstrap Tips</h3>
+                <div class="row ">
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div class="tab-pane active" id="jsjq1" role="tabpanel" aria-labelledby="home-tab">
-            <ol>
-              <li>JQuery Test</li>
-              <li>Use this to ensure js/jquery working properly</li>
-              <li>
-                <pre><code class="language-js">
-$ = jQuery.noConflict();
-
-$(document).ready(function() {
-  console.log('it works!!')
-});
-  </code></pre>
-              </li>
-              <li></li>
-            </ol>
-
+                  <div class="col-md-4">
+                    <h5>MT, PT</h5>
+                  </div>
+                  <div class="col-md-4">
+                    Cards and Usage
+                  </div>
+                  <div class="col-md-4">
+                    Flex here
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End of Bootstrap Content -->
           </div>
-          <div class="tab-pane" id="jsjq2" role="tabpanel" aria-labelledby="profile-tab">
-            <h2>
+          <!-- End of Bootstrap Tab -->
 
-            </h2>
-          </div>
-          <div class="tab-pane" id="jsjq3" role="tabpanel" aria-labelledby="messages-tab">Here we a setting the
-            path where our scss files will be located.
-          </div>
-          <div class="tab-pane" id="jsjq4" role="tabpanel" aria-labelledby="settings-tab">Here we set where the
-            css files will be outputted to
-          </div>
-        </div>
-        <!-- End of Tab Panes -->
+          <!-- Start of CSS/SASS Tab-->
+          <div class="tab-pane fade" id="mainCSS" role="tabpanel" aria-labelledby="profile-tab">
+            <!-- Start of CSS/SASS Content-->
+            <section class="CSS/SASS Tips">
+              <div class="container text-center">
+                <h3>Cascade Style Sheet Tips 3</h3>
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
 
-      </div>
-    </div> <!-- Row -->
-    </section>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#css1" role="tab"
+                          aria-controls="home" aria-selected="true">Background</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#css2" role="tab" aria-controls="profile"
+                          aria-selected="false">Images</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#css3" role="tab" aria-controls="messages"
+                          aria-selected="false">Gradient</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#css4" role="tab" aria-controls="settings"
+                          aria-selected="false">Step 4</a>
+                      </li>
+                    </ul>
+                    <!-- End of Nav tabs -->
 
-
-
-
-
-    <section class="Wordpress">
-
-
-      <h2 class='py-5 text-center'>Wordpress Tips</h2>
-      <div class="container">
-        <h2 class='pt-5 text-center'>Initial Theme Setup</h2>
-        <h4 class='pb-5 text-center'>Step 1</h4>
-        <div class="row">
-          <div class="col-md-6">
-
-            <ol>
-              <li>Begin by going to "app/public/wp-content/themes"</li>
-              <li>Delete Unused themes, make sure not to delete active theme :)</li>
-              <li>Create New folder
-              <li>Add 3 Files </li>
-              <li>styles.css - Theme info</li>
-              <li>index.php - Initial index file</li>
-              <li>screenshot.png - Screenshot for theme in theme selector</li>
-              </li>
-            </ol>
-          </div>
-          <div class="col-md-6">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">File 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">File 3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-              </li>
-            </ul>
-
-            <p> Screenshots to be added here (considering) </p>
-            <p>Or maybe pills bs tabs to display more information on the Files</p>
-            <p> example of information in theme css </p>
-            <p>considering 3 to 9 on large screen for columns, and 12 on anything less maybe;</p>
-          </div>
-        </div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facilis laboriosam odio corporis! Laborum
-        exercitationem quae quo pariatur molestiae voluptatibus.
-
-        <h2 class='pt-5 text-center'>Theme Setup</h2>
-        <h4 class='pb-5 text-center'>Step 2</h4>
-        <div class="row">
-          <div class="col-md-6">
-            <ol>
-              <li>page.php - Pages</li>
-              <li>single.php - Posts</li>
-              <li>header.php - Head of HTML Document</li>
-              <li>footer.php - Footer of HTML Document Insert WP Admin Bar</li>
-              <li>functions.php - Add Stylesheets and JS and Widgets, etc here</li>
-            </ol>
-          </div>
-          <div class="col-md-6">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">File 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">File 3</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-              </li>
-            </ul>
-
-            <p> Screenshots to be added here (considering) </p>
-            <p>Or maybe pills bs tabs to display more information on the Files</p>
-            <p> example of information in theme css </p>
-            <p>considering 3 to 9 on large screen for columns, and 12 on anything less maybe;</p>
-          </div>
-        </div>
-    </section>
-
-    <section class="Wordpress-Structure">
-      <div class="container">
-        <h2 class='py-5 text-center'>Wordpress Structure</h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5 class='text-center'>Posts -> single.php</h5>
-            <ol>
-              <li>This templated is used for posts</li>
-              <li>If not available -> will fall back to index.php for template</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>Pages -> page.php</h5>
-            <ol>
-              <li>This templated is used for pages</li>
-              <li>If not available -> will fall back to index.php for template</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>Header/Footer</h5>
-            <ol>
-              <li>Appropriately named header.php & footer.php</li>
-              <li>Enter PHP mode -> </li>
-              <li>Call into pages with "get_header(); or get_footer();"</li>
-              <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
-              <li>This will enable WP Admin Bar</li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-
-        <h2 class='py-5 text-center'>Wordpress Structure 2</h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5 class='text-center'>Interior Page Template</h5>
-            <ol>
-              <li>This templated is used for posts</li>
-              <li>If not available -> will fall back to index.php for template</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>Pages -> page.php</h5>
-            <ol>
-              <li>This templated is used for pages</li>
-              <li>If not available -> will fall back to index.php for template</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>Header/Footer</h5>
-            <ol>
-              <li>Appropriately named header.php & footer.php</li>
-              <li>Enter PHP mode -> </li>
-              <li>Call into pages with "get_header(); or get_footer();"</li>
-              <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
-              <li>This will enable WP Admin Bar</li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-
-        <h2 class='py-5 text-center'>Wordpress Structure 3</h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5 class='text-center'>Config</h5>
-            <ol>
-              <li>Debug set to either true or false</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>functions.php</h5>
-            <ol>
-              <li>Add Css</li>
-              <li>Add Menus</li>
-              <li>Create Different Sizes for images</li>
-              <li>Add JS</li>
-              <li>Add Widgets</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>Styles</h5>
-            <ol>
-              <li>Create Function </li>
-              <li>Enqueue the style = 'wp_enqueue_style('style');</li>
-              <li>php hook to add css</li>
-              <li>wp_head(); in header</li>
-              <li></li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-
-
-        <h2 class='py-5 text-center'>Wordpress Structure 4</h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5 class='text-center'>normalize css</h5>
-            <ol>
-              <li>to reset css</li>
-              <li>makes browsers render elements more consistently</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>functions.php</h5>
-            <ol>
-              <li>Add Css</li>
-              <li>Add Menus</li>
-              <li>Create Different Sizes for images</li>
-              <li>Add JS</li>
-              <li>Add Widgets</li>
-            </ol>
-
-          </div>
-          <div class="col-md-4">
-            <h5 class='text-center'>Styles</h5>
-            <ol>
-              <li>Create Function </li>
-              <li>Enqueue the style = 'wp_enqueue_style('style');</li>
-              <li>php hook to add css</li>
-              <li>wp_head(); in header</li>
-              <li></li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-
-
-
-        <section class="wordpress-structure-5">
-          <h2 class='py-5 text-center'>Wordpress Structure 5</h2>
-          <div class="row">
-            <div class="col-md-4 italics">
-              <h5 class='text-center'>Extra DB</h5>
-              <ol>
-                <li>created database.php file</li>
-                <li>created reservations file to insert into db</li>
-                <li>created options to display db</li>
-                <li></li>
-              </ol>
-
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="css1" role="tabpanel" aria-labelledby="home-tab">
+                        <ol>
+                          <li>Create a div with a class name</li>
+                          <pre><code class="language-js">
+                                <xmp>  
+            <div class="background">
+              
             </div>
-            <div class="col-md-4">
-              <h5 class='text-center'>functions.php</h5>
-              <ol>
-                <li>Add Css</li>
-                <li>Add Menus</li>
-                <li>Create Different Sizes for images</li>
-                <li>Add JS</li>
-                <li>Add Widgets</li>
-              </ol>
+                                  </xmp>
+                            </code>
+            
+            </pre>
 
-            </div>
-            <div class="col-md-4">
-              <h5 class='text-center'>Styles</h5>
-              <ol>
-                <li>Create Function </li>
-                <li>Enqueue the style = 'wp_enqueue_style('style');</li>
-                <li>php hook to add css</li>
-                <li>wp_head(); in header</li>
-                <li></li>
-              </ol>
-              <p></p>
-              <p></p>
-            </div>
-          </div> <!-- Row -->
-        </section>
+                          <li>Select that class in css and use</li>
+                          <li>
+                            <pre><code class="language-css">
+            .background {
+              background-image: url(img/bg_ingredients.jpg);
+            }
+                  </code></pre>
+                          </li>
+                          <li></li>
+                        </ol>
 
-        <h2 class='py-5 text-center'>CSS/JS Setup for WordPress</h2>
+                      </div>
+                      <div class="tab-pane" id="css2" role="tabpanel" aria-labelledby="profile-tab">
+                        <h2>
 
-        <div class="row">
-          <div class="col-md-6">
-            <ol>
-              <li>In PHP tags insert "wp_head();" : This will allow WP to handle the meta/head information</li>
-              <li>Create a functions.php file</li>
-              <li>Use function "add_action('arguement1, 'arguement2');</li>
-              <li>Create function 'arguement2()'</li>
-              <li>'wp_enqueue_style('university_main_styles', get_stylesheet_uri());</li>
-            </ol>
+                        </h2>
+                      </div>
+                      <div class="tab-pane" id="css3" role="tabpanel" aria-labelledby="messages-tab">Here we a setting
+                        the
+                        path where our scss files will be located.
+                      </div>
+                      <div class="tab-pane" id="css4" role="tabpanel" aria-labelledby="settings-tab">Here we set where
+                        the
+                        css files will be outputted to
+                      </div>
+                    </div>
+                    <!-- End of Tab Panes -->
+
+                    <!-- Sass -->
+                    <section class="Sass">
+                      <div class="container">
+                        <h2 class='py-5 text-center'>Sass</h2>
+                        <div class="row">
+                          <div class="col-md-4 italics">
+                            <h5>main.scss</h5>
+                            <i>
+                              <p>while(have_posts()) { </p>
+                              <p>the_post()</p>
+                              <p>?php the_title() ?php</p>
+                            </i>
+                            <i>
+                              <p>}</p>
+                            </i>
+                            <p>Loop that goes through each post</p>
+                          </div>
+                          <div class="col-md-4">
+                            <h5>node-sass</h5>
+                            <p>the_permalink()</p>
+                            <p>Used for links in conjuction with items such as "the_title()"</p>
+
+                          </div>
+                          <div class="col-md-4">
+                            <h5>Arrays</h5>
+                            <ol>
+                              <li>Arrays is the PHP version of Python List</li>
+                              <li>Arrays = Collection</li>
+                              <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+                              <li>echo $names[0] = "Viseth"</li>
+                            </ol>
+                            <p></p>
+                            <p></p>
+                          </div>
+                        </div> <!-- Row -->
+                      </div>
+                    </section>
+
+                  </div>
+                </div> <!-- Row -->
+              </div>
+            </section>
+            <!-- End of CSS/SASS Content -->
           </div>
-          <div class="col-md-6">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Header File</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Functions File</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">File 3</a>
-              </li>
-            </ul>
+          <!-- End of CSS/SASS -->
+
+
+
+
+          <!-- Start of JSJQ Tab-->
+          <div class="tab-pane fade" id="mainJSJQ" role="tabpanel" aria-labelledby="contact-tab">..j.
+            <!-- Start of JSJQ Content -->
+            <section class="JSJQ-Tips">
+              <div class="container text-center">
+                <h3>JS/Jquery Style Tips 1</h3>
+                <div class="row">
+
+                  <div class="col-md-10 offset-md-1">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#jsjq1" role="tab"
+                          aria-controls="home" aria-selected="true">Test</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#jsjq2" role="tab" aria-controls="profile"
+                          aria-selected="false">Images</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#jsjq3" role="tab" aria-controls="messages"
+                          aria-selected="false">Gradient</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="settings-tab" data-toggle="tab" href="#jsjq4" role="tab" aria-controls="settings"
+                          aria-selected="false">Step 4</a>
+                      </li>
+                    </ul>
+                    <!-- End of Nav tabs -->
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="jsjq1" role="tabpanel" aria-labelledby="home-tab">
+                        <ol>
+                          <li>JQuery Test</li>
+                          <li>Use this to ensure js/jquery working properly</li>
+                          <li>
+                            <pre><code class="language-js">
+          $ = jQuery.noConflict();
+          
+          $(document).ready(function() {
+            console.log('it works!!')
+          });
+            </code></pre>
+                          </li>
+                          <li></li>
+                        </ol>
+
+                      </div>
+                      <div class="tab-pane" id="jsjq2" role="tabpanel" aria-labelledby="profile-tab">
+                        <h2>
+
+                        </h2>
+                      </div>
+                      <div class="tab-pane" id="jsjq3" role="tabpanel" aria-labelledby="messages-tab">Here we a setting
+                        the
+                        path where our scss files will be located.
+                      </div>
+                      <div class="tab-pane" id="jsjq4" role="tabpanel" aria-labelledby="settings-tab">Here we set where
+                        the
+                        css files will be outputted to
+                      </div>
+                    </div>
+                    <!-- End of Tab Panes -->
+
+                  </div>
+                </div> <!-- Row -->
+              </div>
+            </section>
+
+            <!-- End of JSJQ Content -->
           </div>
+          <!-- End of JSJQ -->
+
+
+
+          <!-- Start of Wordpress Theme -->
+          <div class="tab-pane fade" id="mainWordpress" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- Start of Wordpress Content -->
+            <section class="Wordpress-Tips">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+
+                    <h2 class='py-5 text-center'>Wordpress Tips</h2>
+                    <div class="container">
+                      <h2 class='pt-5 text-center'>Initial Theme Setup</h2>
+                      <h4 class='pb-5 text-center'>Step 1</h4>
+                      <div class="row">
+                        <div class="col-md-6">
+
+                          <ol>
+                            <li>Begin by going to "app/public/wp-content/themes"</li>
+                            <li>Delete Unused themes, make sure not to delete active theme :)</li>
+                            <li>Create New folder
+                            <li>Add 3 Files </li>
+                            <li>styles.css - Theme info</li>
+                            <li>index.php - Initial index file</li>
+                            <li>screenshot.png - Screenshot for theme in theme selector</li>
+                            </li>
+                          </ol>
+                        </div>
+                        <div class="col-md-6">
+                          <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">File 2</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">File 3</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                          </ul>
+
+                          <p> Screenshots to be added here (considering) </p>
+                          <p>Or maybe pills bs tabs to display more information on the Files</p>
+                          <p> example of information in theme css </p>
+                          <p>considering 3 to 9 on large screen for columns, and 12 on anything less maybe;</p>
+                        </div>
+                      </div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facilis laboriosam odio
+                      corporis! Laborum
+                      exercitationem quae quo pariatur molestiae voluptatibus.
+
+                      <h2 class='pt-5 text-center'>Theme Setup</h2>
+                      <h4 class='pb-5 text-center'>Step 2</h4>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <ol>
+                            <li>page.php - Pages</li>
+                            <li>single.php - Posts</li>
+                            <li>header.php - Head of HTML Document</li>
+                            <li>footer.php - Footer of HTML Document Insert WP Admin Bar</li>
+                            <li>functions.php - Add Stylesheets and JS and Widgets, etc here</li>
+                          </ol>
+                        </div>
+                        <div class="col-md-6">
+                          <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">File 2</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">File 3</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                          </ul>
+
+                          <p> Screenshots to be added here (considering) </p>
+                          <p>Or maybe pills bs tabs to display more information on the Files</p>
+                          <p> example of information in theme css </p>
+                          <p>considering 3 to 9 on large screen for columns, and 12 on anything less maybe;</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!--End of Row -->
+                </div>
+            </section>
+            <!-- End of Wordpress Content -->
+          </div>
+          <!-- End of Wordpress Theme-->
+
+
+
+          <!-- Start of Wordpress -->
+          <div class="tab-pane fade" id="Structure1" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- Start of Wordpress Content -->
+            <section class="Wordpress-Tips">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+
+                    <h2 class='py-5 text-center'>Wordpress Structure</h2>
+                    <div class="row">
+                      <div class="col-md-4 italics">
+                        <h5 class='text-center'>Posts -> single.php</h5>
+                        <ol>
+                          <li>This templated is used for posts</li>
+                          <li>If not available -> will fall back to index.php for template</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>Pages -> page.php</h5>
+                        <ol>
+                          <li>This templated is used for pages</li>
+                          <li>If not available -> will fall back to index.php for template</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>Header/Footer</h5>
+                        <ol>
+                          <li>Appropriately named header.php & footer.php</li>
+                          <li>Enter PHP mode -> </li>
+                          <li>Call into pages with "get_header(); or get_footer();"</li>
+                          <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
+                          <li>This will enable WP Admin Bar</li>
+                        </ol>
+                        <p></p>
+                        <p></p>
+                      </div>
+                    </div> <!-- Row -->
+
+                    <h2 class='py-5 text-center'>Wordpress Structure 2</h2>
+                    <div class="row">
+                      <div class="col-md-4 italics">
+                        <h5 class='text-center'>Interior Page Template</h5>
+                        <ol>
+                          <li>This templated is used for posts</li>
+                          <li>If not available -> will fall back to index.php for template</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>Pages -> page.php</h5>
+                        <ol>
+                          <li>This templated is used for pages</li>
+                          <li>If not available -> will fall back to index.php for template</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>Header/Footer</h5>
+                        <ol>
+                          <li>Appropriately named header.php & footer.php</li>
+                          <li>Enter PHP mode -> </li>
+                          <li>Call into pages with "get_header(); or get_footer();"</li>
+                          <li>In footer -> Drop into PHP mode and enter 'wp_footer();'</li>
+                          <li>This will enable WP Admin Bar</li>
+                        </ol>
+                        <p></p>
+                        <p></p>
+                      </div>
+                    </div> <!-- Row -->
+
+                    <h2 class='py-5 text-center'>Wordpress Structure 3</h2>
+                    <div class="row">
+                      <div class="col-md-4 italics">
+                        <h5 class='text-center'>Config</h5>
+                        <ol>
+                          <li>Debug set to either true or false</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>functions.php</h5>
+                        <ol>
+                          <li>Add Css</li>
+                          <li>Add Menus</li>
+                          <li>Create Different Sizes for images</li>
+                          <li>Add JS</li>
+                          <li>Add Widgets</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>Styles</h5>
+                        <ol>
+                          <li>Create Function </li>
+                          <li>Enqueue the style = 'wp_enqueue_style('style');</li>
+                          <li>php hook to add css</li>
+                          <li>wp_head(); in header</li>
+                          <li></li>
+                        </ol>
+                        <p></p>
+                        <p></p>
+                      </div>
+                    </div> <!-- Row -->
+
+
+                    <h2 class='py-5 text-center'>Wordpress Structure 4</h2>
+                    <div class="row">
+                      <div class="col-md-4 italics">
+                        <h5 class='text-center'>normalize css</h5>
+                        <ol>
+                          <li>to reset css</li>
+                          <li>makes browsers render elements more consistently</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>functions.php</h5>
+                        <ol>
+                          <li>Add Css</li>
+                          <li>Add Menus</li>
+                          <li>Create Different Sizes for images</li>
+                          <li>Add JS</li>
+                          <li>Add Widgets</li>
+                        </ol>
+
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class='text-center'>Styles</h5>
+                        <ol>
+                          <li>Create Function </li>
+                          <li>Enqueue the style = 'wp_enqueue_style('style');</li>
+                          <li>php hook to add css</li>
+                          <li>wp_head(); in header</li>
+                          <li></li>
+                        </ol>
+                        <p></p>
+                        <p></p>
+                      </div>
+                    </div> <!-- Row -->
+
+
+
+                    <section class="wordpress-structure-5">
+                      <h2 class='py-5 text-center'>Wordpress Structure 5</h2>
+                      <div class="row">
+                        <div class="col-md-4 italics">
+                          <h5 class='text-center'>Extra DB</h5>
+                          <ol>
+                            <li>created database.php file</li>
+                            <li>created reservations file to insert into db</li>
+                            <li>created options to display db</li>
+                            <li></li>
+                          </ol>
+
+                        </div>
+                        <div class="col-md-4">
+                          <h5 class='text-center'>functions.php</h5>
+                          <ol>
+                            <li>Add Css</li>
+                            <li>Add Menus</li>
+                            <li>Create Different Sizes for images</li>
+                            <li>Add JS</li>
+                            <li>Add Widgets</li>
+                          </ol>
+
+                        </div>
+                        <div class="col-md-4">
+                          <h5 class='text-center'>Styles</h5>
+                          <ol>
+                            <li>Create Function </li>
+                            <li>Enqueue the style = 'wp_enqueue_style('style');</li>
+                            <li>php hook to add css</li>
+                            <li>wp_head(); in header</li>
+                            <li></li>
+                          </ol>
+                          <p></p>
+                          <p></p>
+                        </div>
+                      </div> <!-- Row -->
+
+                  </div>
+                </div>
+                <!--End of Row -->
+              </div>
+            </section>
+            <!-- End of Wordpress Content -->
+          </div>
+          <!-- End of Wordpress -->
+
+
+
+          <!-- Start of Wordpress -->
+          <div class="tab-pane fade" id="Structure2" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- Start of Wordpress Content -->
+            <section class="Wordpress-Tips">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+
+                    <h2 class='py-5 text-center'>CSS/JS Setup for WordPress</h2>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <ol>
+                          <li>In PHP tags insert "wp_head();" : This will allow WP to handle the meta/head
+                            information</li>
+                          <li>Create a functions.php file</li>
+                          <li>Use function "add_action('arguement1, 'arguement2');</li>
+                          <li>Create function 'arguement2()'</li>
+                          <li>'wp_enqueue_style('university_main_styles', get_stylesheet_uri());</li>
+                        </ol>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Header File</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Functions File</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">File 3</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <section class="Wordpress-Loops">
+                    <div class="container">
+                      <h2 class='py-5 text-center'>Wordpress Loops</h2>
+                      <div class="row">
+                        <div class="col-md-4 italics">
+                          <h5>Posts</h5>
+                          <i>
+                            <p>while(have_posts()) { </p>
+                            <p>the_post()</p>
+                            <p>?php the_title() ?php</p>
+                          </i>
+                          <i>
+                            <p>}</p>
+                          </i>
+                          <p>Loop that goes through each post</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Permalink</h5>
+                          <p>the_permalink()</p>
+                          <p>Used for links in conjuction with items such as "the_title()"</p>
+
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Arrays</h5>
+                          <ol>
+                            <li>Arrays is the PHP version of Python List</li>
+                            <li>Arrays = Collection</li>
+                            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+                            <li>echo $names[0] = "Viseth"</li>
+                          </ol>
+                          <p></p>
+                          <p></p>
+                        </div>
+                      </div> <!-- Row -->
+                    </div>
+                  </section>
+
+                  <section class="Wordpress-To Know">
+                    <div class="container">
+                      <h2 class='py-5 text-center'>Wordpress Loops</h2>
+                      <div class="row">
+                        <div class="col-md-4 ">
+                          <h5>the_title() vs get_the_title</h5>
+                          <ol>
+                            <li>the_title() handles echo</li>
+                            <li>get_the_title() doesn't echo</li>
+                            <li>Returns value, and we use as fit;</li>
+                          </ol>
+                          <i>
+                            <p>}</p>
+                          </i>
+                          <p>Loop that goes through each post</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Permalink</h5>
+                          <p>the_permalink()</p>
+                          <p>Used for links in conjuction with items such as "the_title()"</p>
+
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Arrays</h5>
+                          <ol>
+                            <li>Arrays is the PHP version of Python List</li>
+                            <li>Arrays = Collection</li>
+                            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+                            <li>echo $names[0] = "Viseth"</li>
+                          </ol>
+                          <p></p>
+                          <p></p>
+                        </div>
+                      </div> <!-- Row -->
+                    </div>
+                  </section>
+
+                </div>
+              </div>
+              <!--End of Row -->
+
+            </section>
+            <!-- End of Wordpress Content -->
+          </div>
+          <!-- End of Wordpress -->
+
+
+
+
+
+
+
+
+
+          <!-- Start of PHP -->
+          <div class="tab-pane fade" id="php" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- Start of PHP Content -->
+            <section class="PHP-Tips">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+
+                    <section class="PHP">
+                      <h2 class='py-5 text-center'>PHP</h2>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h5>Variables</h5>
+                          <p>$myname = "Viseth";</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Functions</h5>
+                          <p>Syntax</p>
+                          <ul>
+                            <li><i>function myfunction() { <br>
+                                echo what function does here <br>
+                                }</i>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Arrays</h5>
+                          <ol>
+                            <li>Arrays is the PHP version of Python List</li>
+                            <li>Arrays = Collection</li>
+                            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+                            <li>echo $names[0] = "Viseth"</li>
+                          </ol>
+                          <p></p>
+                          <p></p>
+                        </div>
+                      </div> <!-- Row -->
+
+                      <h2 class='py-5 text-center'>PHP 2</h2>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h5>Loops</h5>
+                          <p>Basic While Loop</p>
+                          <i>
+                            <p>while($count <100 ) { <br>
+                                echo "$count"; <br>
+                                $count++; <br>
+                                }</p>
+                          </i>
+                          <p>$myname = "Viseth";</p>
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Functions</h5>
+                          <p>Syntax</p>
+                          <ul>
+                            <li><i>function myfunction() { <br>
+                                echo what function does here <br>
+                                }</i>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-4">
+                          <h5>Arrays</h5>
+                          <ol>
+                            <li>Arrays is the PHP version of Python List</li>
+                            <li>Arrays = Collection</li>
+                            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
+                            <li>echo $names[0] = "Viseth"</li>
+                          </ol>
+                          <p></p>
+                          <p></p>
+                        </div>
+                      </div> <!-- Row -->
+                    </section>
+
+                  </div>
+                </div>
+                <!--End of Row -->
+              </div>
+            </section>
+            <!-- End of PHP Content -->
+          </div>
+          <!-- End of PHP -->
+
+
+
+
+
+
+          <!-- Start of PHP2 -->
+          <div class="tab-pane fade" id="php2" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- Start of PHP2 Content -->
+            <section class="PHP-Tips">
+              <div class="container text-center">
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                      <section class="Custom Post">
+                          <div class="container">
+                            <h2 class='py-5 text-center'>Custom Post Types </h2>
+                            <div class="row">
+                              <div class="col-md-4 italics">
+                                <h5>main.scss</h5>
+                                <i>
+                                  <li>Wordpress can save alot of different contetn, the most common is posts</li>
+                                  <li>Post</li>
+                                  <li>Page</li>
+                                  <li>Attachment</li>
+                                  <li>Revision</li>
+                                  <li>Menus </li>
+                                </i>
+                                <p>Custom post types can act like posts or pages, you can organize them with tags cats and taxonomies
+                                </p>
+                                <li>They have their own index or you can create your own</li>
+                                <li>Can have some options, all options or noen of them</li>
+                                <li>You can show them anywehre in your site with a Custom Loop</li>
+                                <li>You can create your custom post type in you functions.php or in a custom plugin</li>
+                                <i>
+                                  <p>}</p>
+                                </i>
+                                <p>Loop that goes through each post</p>
+                              </div>
+                              <div class="col-md-4">
+                                <h5>Post </h5>
+                                <ol>
+                                  <li>Posts are chronological</li>
+                                  <li>No parrent or child</li>
+                                  <li>Theres an Authors</li>
+                                  <li>Categories and tags</li>
+                                </ol>
+              
+              
+                              </div>
+                              <div class="col-md-4">
+                                <h5>Pages</h5>
+                                <ol>
+                                  <li>Only 1 element</li>
+                                  <li>Can have parent or child</li>
+              
+                                </ol>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </div> <!-- Row -->
+                          </div>
+                        </section>
+
+
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+
+
+
+          
+
+
         </div>
       </div>
-    </section>
-
-    <section class="Wordpress-Loops">
-      <div class="container">
-        <h2 class='py-5 text-center'>Wordpress Loops</h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5>Posts</h5>
-            <i>
-              <p>while(have_posts()) { </p>
-              <p>the_post()</p>
-              <p>?php the_title() ?php</p>
-            </i>
-            <i>
-              <p>}</p>
-            </i>
-            <p>Loop that goes through each post</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Permalink</h5>
-            <p>the_permalink()</p>
-            <p>Used for links in conjuction with items such as "the_title()"</p>
-
-          </div>
-          <div class="col-md-4">
-            <h5>Arrays</h5>
-            <ol>
-              <li>Arrays is the PHP version of Python List</li>
-              <li>Arrays = Collection</li>
-              <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
-              <li>echo $names[0] = "Viseth"</li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-      </div>
-    </section>
-
-    <section class="Wordpress-To Know">
-      <div class="container">
-        <h2 class='py-5 text-center'>Wordpress Loops</h2>
-        <div class="row">
-          <div class="col-md-4 ">
-            <h5>the_title() vs get_the_title</h5>
-            <ol>
-              <li>the_title() handles echo</li>
-              <li>get_the_title() doesn't echo</li>
-              <li>Returns value, and we use as fit;</li>
-            </ol>
-            <i>
-              <p>}</p>
-            </i>
-            <p>Loop that goes through each post</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Permalink</h5>
-            <p>the_permalink()</p>
-            <p>Used for links in conjuction with items such as "the_title()"</p>
-
-          </div>
-          <div class="col-md-4">
-            <h5>Arrays</h5>
-            <ol>
-              <li>Arrays is the PHP version of Python List</li>
-              <li>Arrays = Collection</li>
-              <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
-              <li>echo $names[0] = "Viseth"</li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-      </div>
-    </section>
+    </div>
+  </div>
 
 
-    <section class="PHP">
-      <h2 class='py-5 text-center'>PHP</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Variables</h5>
-          <p>$myname = "Viseth";</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Functions</h5>
-          <p>Syntax</p>
-          <ul>
-            <li><i>function myfunction() { <br>
-                echo what function does here <br>
-                }</i>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Arrays</h5>
-          <ol>
-            <li>Arrays is the PHP version of Python List</li>
-            <li>Arrays = Collection</li>
-            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
-            <li>echo $names[0] = "Viseth"</li>
-          </ol>
-          <p></p>
-          <p></p>
-        </div>
-      </div> <!-- Row -->
-
-      <h2 class='py-5 text-center'>PHP 2</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Loops</h5>
-          <p>Basic While Loop</p>
-          <i>
-            <p>while($count <100 ) { <br>
-                echo "$count"; <br>
-                $count++; <br>
-                }</p>
-          </i>
-          <p>$myname = "Viseth";</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Functions</h5>
-          <p>Syntax</p>
-          <ul>
-            <li><i>function myfunction() { <br>
-                echo what function does here <br>
-                }</i>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Arrays</h5>
-          <ol>
-            <li>Arrays is the PHP version of Python List</li>
-            <li>Arrays = Collection</li>
-            <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
-            <li>echo $names[0] = "Viseth"</li>
-          </ol>
-          <p></p>
-          <p></p>
-        </div>
-      </div> <!-- Row -->
-    </section>
 
 
-    <!-- Sass -->
-    <section class="Custom Post">
-      <div class="container">
-        <h2 class='py-5 text-center'>Custom Post Types </h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5>main.scss</h5>
-            <i>
-              <li>Wordpress can save alot of different contetn, the most common is posts</li>
-              <li>Post</li>
-              <li>Page</li>
-              <li>Attachment</li>
-              <li>Revision</li>
-              <li>Menus </li>
-            </i>
-            <p>Custom post types can act like posts or pages, you can organize them with tags cats and taxonomies </p>
-            <li>They have their own index or you can create your own</li>
-            <li>Can have some options, all options or noen of them</li>
-            <li>You can show them anywehre in your site with a Custom Loop</li>
-            <li>You can create your custom post type in you functions.php or in a custom plugin</li>
-            <i>
-              <p>}</p>
-            </i>
-            <p>Loop that goes through each post</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Post </h5>
-            <ol>
-              <li>Posts are chronological</li>
-              <li>No parrent or child</li>
-              <li>Theres an Authors</li>
-              <li>Categories and tags</li>
-            </ol>
 
 
-          </div>
-          <div class="col-md-4">
-            <h5>Pages</h5>
-            <ol>
-              <li>Only 1 element</li>
-              <li>Can have parent or child</li>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-      </div>
-    </section>
-
-    <!-- Sass -->
-    <section class="Sass">
-      <div class="container">
-        <h2 class='py-5 text-center'>Sass</h2>
-        <div class="row">
-          <div class="col-md-4 italics">
-            <h5>main.scss</h5>
-            <i>
-              <p>while(have_posts()) { </p>
-              <p>the_post()</p>
-              <p>?php the_title() ?php</p>
-            </i>
-            <i>
-              <p>}</p>
-            </i>
-            <p>Loop that goes through each post</p>
-          </div>
-          <div class="col-md-4">
-            <h5>node-sass</h5>
-            <p>the_permalink()</p>
-            <p>Used for links in conjuction with items such as "the_title()"</p>
-
-          </div>
-          <div class="col-md-4">
-            <h5>Arrays</h5>
-            <ol>
-              <li>Arrays is the PHP version of Python List</li>
-              <li>Arrays = Collection</li>
-              <li>Syntax = $names = array("Viseth", "Abby", "Tyson", "Sadie");</li>
-              <li>echo $names[0] = "Viseth"</li>
-            </ol>
-            <p></p>
-            <p></p>
-          </div>
-        </div> <!-- Row -->
-      </div>
-    </section>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 </body>
 
 </html>
