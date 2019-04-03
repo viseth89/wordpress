@@ -44,6 +44,10 @@
 
     <!-- WP Menu -->
     <div class="main-menu">
+      <div class="mobile-menu">
+        <a href="#" class="fa fa-bars">Menu</a>
+      </div>
+
         <div class="navigation container">
             <?php 
             $args = array(

@@ -18,6 +18,11 @@
   wp_enqueue_style('font-awesome');
   wp_enqueue_style('style');
 
+  wp_register_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
+
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('script');
+
  }
 
   // Hook the style, 1st Parameter = , 2nd Parameter = function 

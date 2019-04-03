@@ -12,6 +12,8 @@ Text Domain: twentynineteen
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
+$primary-color: #a61206;
+
 html {
   // Keep sizing limits
   box-sizing: border-box;
@@ -114,9 +116,10 @@ nav.socials ul {
   list-style: none;
   text-align: center;
   padding: 0;
+
   @media only screen and (min-width: 768px) {
     & {
-      float:right;
+      float: right;
     }
   }
 
@@ -137,50 +140,88 @@ nav.socials ul {
   }
 
   li a[href*="facebook.com"]::before {
-    content:'\f09a';
+    content: '\f09a';
   }
+
   li a[href*="twitter.com"]::before {
-    content:'\f099';
+    content: '\f099';
   }
+
   li a[href*="pinterest.com"]::before {
-    content:'\f231';
+    content: '\f231';
   }
+
   li a[href*="youtube.com"]::before {
-    content:'\f16a';
+    content: '\f16a';
   }
+
   li a[href*="instagram.com"]::before {
-    content:'\f16d';
+    content: '\f16d';
   }
 }
 
 // Main Menu
 nav.site-nav {
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    & {
+      display: block;
+    }
+  }
+
   ul {
-    list-style:none;
-    margin:0;
-    padding:0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     width: 100%;
     display: table;
 
-    li {
-      display:table-cell;
-      width: 1%;
 
-      a {
-        text-align:center;
-        padding: 20px 0;
-        display: block;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
-        color:#000;
-        font-family: arial, helvetica;
+    @media only screen and (min-width: 768px) {
+      li {
+        display: table-cell;
+        width: 1%;
 
-      }
+        &.current_page_item a {
+          border-bottom: 8px solid $primary-color;
+        }
 
-      &.current_page_item a {
-        border-bottom: 8px solid #a61206;
       }
     }
+
+    a {
+      text-align: center;
+      padding: 20px 0;
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      font-family: arial, helvetica;
+
+    }
+  }
+}
+
+// Responsive Menu
+.mobile-menu a {
+  @media only screen and (max-width: 767px) {
+
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    background-color: $primary-color;
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    // font-family: helvetica;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: none;
   }
 }
