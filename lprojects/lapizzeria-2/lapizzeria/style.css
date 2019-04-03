@@ -11,8 +11,133 @@ License URI: LICENSE
 Text Domain: twentynineteen
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
-body {
-  background-color: red; }
+html {
+  box-sizing: border-box; }
 
-p {
-  color: blue; }
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 24px; }
+
+.clear,
+.clear::after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto; }
+
+.sr-text {
+  display: none; }
+
+header.site-header {
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 30px; }
+
+@media only screen and (min-width: 768px) {
+  div.logo {
+    text-align: left; }
+  header.site-header .container {
+    position: relative; }
+  header.site-header .header-information {
+    position: absolute;
+    top: 0;
+    right: 0; } }
+
+@media only screen and (min-width: 992px) {
+  div.logo {
+    text-align: center; } }
+
+img.logoimage {
+  width: 250px; }
+
+div.address {
+  display: block;
+  clear: both;
+  padding-top: 10px; }
+
+div.address p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  div.address p {
+    text-align: right; } }
+
+nav.socials ul {
+  list-style: none;
+  text-align: center;
+  padding: 0; }
+
+@media only screen and (min-width: 768px) {
+  nav.socials ul {
+    float: right; } }
+
+nav.socials ul li {
+  position: relative;
+  display: inline-block; }
+
+nav.socials ul li a:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  content: '\f08e';
+  font-size: 30px;
+  color: #000;
+  -webkit-font-smoothing: antialiazed; }
+
+nav.socials ul li a[href*="facebook.com"]::before {
+  content: '\f09a'; }
+
+nav.socials ul li a[href*="twitter.com"]::before {
+  content: '\f099'; }
+
+nav.socials ul li a[href*="pinterest.com"]::before {
+  content: '\f231'; }
+
+nav.socials ul li a[href*="youtube.com"]::before {
+  content: '\f16a'; }
+
+nav.socials ul li a[href*="instagram.com"]::before {
+  content: '\f16d'; }
+
+nav.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table; }
+
+nav.site-nav ul li {
+  display: table-cell;
+  width: 1%; }
+
+nav.site-nav ul li a {
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-family: arial, helvetica; }
+
+nav.site-nav ul li.current_page_item a {
+  border-bottom: 8px solid #a61206; }

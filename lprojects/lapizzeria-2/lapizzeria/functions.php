@@ -8,11 +8,14 @@
   2.  Normalize CSS = Display elements universally amongst browsers
   3.  Here we pass normalize into our style.css as a dependency 'array('normalize')
   */
-  wp_register_style('normalize', get_template_directory_uri() . 'css/normalize.css', array(), '1.0' );
+  wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '1.0' );
+  wp_register_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '4.7' );
+  
   wp_register_style('style', get_template_directory_uri() . '/style.css', array('normalize'), '1.0' );
 
   // Enqueue the style
   wp_enqueue_style('normalize');
+  wp_enqueue_style('font-awesome');
   wp_enqueue_style('style');
 
  }
@@ -33,7 +36,8 @@ function lapizzeria_menus() {
   /*
   1st Parameter = Name given to Menu : 2nd Parameter = Readable Name with '__' outside parenthesis, 3rd Parameter (optional) = domain name
   */
-  'header-menu' => __('Header Menu', 'lapizzeria')
+  'header-menu' => __('Header Menu', 'lapizzeria'),
+  'social-menu' => __('Social Menu', 'lapizzeria')
  ) );
   
 }
