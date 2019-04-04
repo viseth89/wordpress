@@ -1,4 +1,13 @@
  <?php
+
+// Add Thumbnail/image support for pages/posts
+  function lapizzeria_setup() {
+    add_theme_support('post-thumbnails');
+  }
+
+add_action('after_setup_theme', 'lapizzeria_setup');
+
+
   // 1. include 'wp_head()' within php block in 'header.php' 
  function lapizzeria_styles() {
   // adding stylesheets
@@ -8,6 +17,7 @@
   2.  Normalize CSS = Display elements universally amongst browsers
   3.  Here we pass normalize into our style.css as a dependency 'array('normalize')
   */
+  wp_register_style('googlefont', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700,900', array(), '1.0.0');
   wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '1.0' );
   wp_register_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '4.7' );
   
@@ -16,6 +26,7 @@
   // Enqueue the style
   wp_enqueue_style('normalize');
   wp_enqueue_style('font-awesome');
+  wp_enqueue_style('googlefont');
   wp_enqueue_style('style');
 
   wp_register_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
@@ -48,3 +59,4 @@ function lapizzeria_menus() {
 }
 
 add_action('init', 'lapizzeria_menus');
+
